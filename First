@@ -18,6 +18,7 @@ local OS = Instance.new("TextLabel")
 local InfinitY = Instance.new("TextButton")
 local RNG = Instance.new("TextButton")
 local Autiste = Instance.new("TextButton")
+local Amogus = Instance.new("TextButton")
 local HideOpen = Instance.new("Frame")
 local Open = Instance.new("TextButton")
 
@@ -30,7 +31,7 @@ KosovoGUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 GUI.Name = "GUI"
 GUI.Parent = KosovoGUI
 GUI.BackgroundColor3 = Color3.fromRGB(65, 65, 65)
-GUI.Position = UDim2.new(0.286132246, 0, 0.159454316, 0)
+GUI.Position = UDim2.new(0.247412965, 0, 0.178404748, 0)
 GUI.Size = UDim2.new(0, 677, 0, 440)
 
 Pilote.Name = "Pilote"
@@ -142,7 +143,7 @@ Version.BackgroundTransparency = 1.000
 Version.Position = UDim2.new(0.889217138, 0, 0.931818128, 0)
 Version.Size = UDim2.new(0, 75, 0, 30)
 Version.Font = Enum.Font.Roboto
-Version.Text = "V.1.4"
+Version.Text = "V.1.5"
 Version.TextColor3 = Color3.fromRGB(0, 0, 0)
 Version.TextSize = 20.000
 
@@ -197,6 +198,19 @@ Autiste.TextSize = 40.000
 Autiste.TextStrokeColor3 = Color3.fromRGB(8, 8, 8)
 Autiste.TextStrokeTransparency = 0.000
 
+Amogus.Name = "Amogus"
+Amogus.Parent = GUI
+Amogus.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Amogus.BackgroundTransparency = 0.850
+Amogus.Position = UDim2.new(0.6706056, 0, 0.472727269, 0)
+Amogus.Size = UDim2.new(0, 200, 0, 50)
+Amogus.Font = Enum.Font.Cartoon
+Amogus.Text = "AMOGUS"
+Amogus.TextColor3 = Color3.fromRGB(208, 0, 3)
+Amogus.TextSize = 40.000
+Amogus.TextStrokeColor3 = Color3.fromRGB(8, 8, 8)
+Amogus.TextStrokeTransparency = 0.000
+
 HideOpen.Name = "HideOpen"
 HideOpen.Parent = KosovoGUI
 HideOpen.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -217,7 +231,7 @@ Open.TextSize = 30.000
 
 -- Scripts:
 
-local function IEEEFC_fake_script() -- Pilote.Mod 
+local function LWCYBQQ_fake_script() -- Pilote.Mod 
 	local script = Instance.new('LocalScript', Pilote)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -327,8 +341,8 @@ local function IEEEFC_fake_script() -- Pilote.Mod
 		coroutine.wrap(VJBMO_fake_script)()
 	end)
 end
-coroutine.wrap(IEEEFC_fake_script)()
-local function ZJYUMRJ_fake_script() -- Cosmetics.Cos 
+coroutine.wrap(LWCYBQQ_fake_script)()
+local function MRCING_fake_script() -- Cosmetics.Cos 
 	local script = Instance.new('LocalScript', Cosmetics)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1729,8 +1743,8 @@ local function ZJYUMRJ_fake_script() -- Cosmetics.Cos
 		coroutine.wrap(DRYID_fake_script)()
 	end)
 end
-coroutine.wrap(ZJYUMRJ_fake_script)()
-local function CCMC_fake_script() -- PlayerHealth.ESP 
+coroutine.wrap(MRCING_fake_script)()
+local function BUWNDZ_fake_script() -- PlayerHealth.ESP 
 	local script = Instance.new('LocalScript', PlayerHealth)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -2069,8 +2083,8 @@ local function CCMC_fake_script() -- PlayerHealth.ESP
 		end)
 	end)
 end
-coroutine.wrap(CCMC_fake_script)()
-local function IQHF_fake_script() -- GUI.Move 
+coroutine.wrap(BUWNDZ_fake_script)()
+local function JWRQTO_fake_script() -- GUI.Move 
 	local script = Instance.new('LocalScript', GUI)
 
 	local UIS = game:GetService('UserInputService')
@@ -2143,8 +2157,8 @@ local function IQHF_fake_script() -- GUI.Move
 	
 	end)
 end
-coroutine.wrap(IQHF_fake_script)()
-local function KVZYV_fake_script() -- DropCos.Drop 
+coroutine.wrap(JWRQTO_fake_script)()
+local function DRLHTW_fake_script() -- DropCos.Drop 
 	local script = Instance.new('LocalScript', DropCos)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -2159,16 +2173,16 @@ local function KVZYV_fake_script() -- DropCos.Drop
 		end)
 	end)
 end
-coroutine.wrap(KVZYV_fake_script)()
-local function XIHZNP_fake_script() -- AutoFarm.AutoFarm 
+coroutine.wrap(DRLHTW_fake_script)()
+local function ULRO_fake_script() -- AutoFarm.AutoFarm 
 	local script = Instance.new('LocalScript', AutoFarm)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/BunnySalf/Hentai/main/MHEEHUB", true))()
 	end)
 end
-coroutine.wrap(XIHZNP_fake_script)()
-local function ZASOZJX_fake_script() -- HideStand.Hide 
+coroutine.wrap(ULRO_fake_script)()
+local function OSPKA_fake_script() -- HideStand.Hide 
 	local script = Instance.new('LocalScript', HideStand)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -2230,8 +2244,8 @@ local function ZASOZJX_fake_script() -- HideStand.Hide
 		coroutine.wrap(EFDNDOR_fake_script)()
 	end)
 end
-coroutine.wrap(ZASOZJX_fake_script)()
-local function JHNX_fake_script() -- ItemF.Farm 
+coroutine.wrap(OSPKA_fake_script)()
+local function YJPYCT_fake_script() -- ItemF.Farm 
 	local script = Instance.new('LocalScript', ItemF)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -2242,16 +2256,16 @@ local function JHNX_fake_script() -- ItemF.Farm
 	end)
 	
 end
-coroutine.wrap(JHNX_fake_script)()
-local function HHWHH_fake_script() -- InfinitY.INf 
+coroutine.wrap(YJPYCT_fake_script)()
+local function EYLYK_fake_script() -- InfinitY.INf 
 	local script = Instance.new('LocalScript', InfinitY)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGet(("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source%27"),true))()
 	end)
 end
-coroutine.wrap(HHWHH_fake_script)()
-local function SIUNAIV_fake_script() -- RNG.Stand 
+coroutine.wrap(EYLYK_fake_script)()
+local function NQBMYVX_fake_script() -- RNG.Stand 
 	local script = Instance.new('LocalScript', RNG)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -2373,8 +2387,8 @@ local function SIUNAIV_fake_script() -- RNG.Stand
 		coroutine.wrap(NVSS_fake_script)()
 	end)
 end
-coroutine.wrap(SIUNAIV_fake_script)()
-local function DWXWB_fake_script() -- Autiste.Autiscript 
+coroutine.wrap(NQBMYVX_fake_script)()
+local function MGSTT_fake_script() -- Autiste.Autiscript 
 	local script = Instance.new('LocalScript', Autiste)
 
 	local plr = game.Players.LocalPlayer.Name
@@ -2391,8 +2405,30 @@ local function DWXWB_fake_script() -- Autiste.Autiscript
 		Parti:WaitForChild("Shirt Graphic"):Destroy()
 	end)
 end
-coroutine.wrap(DWXWB_fake_script)()
-local function TPQRN_fake_script() -- KosovoGUI.OpenAndHide 
+coroutine.wrap(MGSTT_fake_script)()
+local function EKCDN_fake_script() -- Amogus.LocalScript 
+	local script = Instance.new('LocalScript', Amogus)
+
+	local plr = game.Players.LocalPlayer.Name
+	local Parti = game.Workspace.Living:FindFirstChild(plr)
+	local up = Parti.UpperTorso
+	script.Parent.MouseButton1Click:Connect(function()
+		up.Waist:Destroy()
+		up.BodyBackAttachment:Destroy()
+		up.BodyFrontAttachment:Destroy()
+		up.LeftCollarAttachment:Destroy()
+		up.LeftShoulderRigAttachment:Destroy()
+		up.NeckAttachment:Destroy()
+		up.NeckRigAttachment:Destroy()
+		up.RightCollarAttachment:Destroy()
+		up.RightShoulderRigAttachment:Destroy()
+		up.WaistRigAttachment:Destroy()
+		Parti.Pants:Destroy()
+		Parti.Shirt:Destroy()
+	end)
+end
+coroutine.wrap(EKCDN_fake_script)()
+local function NCVKXC_fake_script() -- KosovoGUI.OpenAndHide 
 	local script = Instance.new('LocalScript', KosovoGUI)
 
 	script.Parent.HideOpen.Open.MouseButton1Click:Connect(function()
@@ -2405,8 +2441,8 @@ local function TPQRN_fake_script() -- KosovoGUI.OpenAndHide
 		end
 	end)
 end
-coroutine.wrap(TPQRN_fake_script)()
-local function UXMCUQ_fake_script() -- KosovoGUI.Kick 
+coroutine.wrap(NCVKXC_fake_script)()
+local function TLWZC_fake_script() -- KosovoGUI.Kick 
 	local script = Instance.new('LocalScript', KosovoGUI)
 
 	local plr = game.Players.LocalPlayer
@@ -2416,4 +2452,4 @@ local function UXMCUQ_fake_script() -- KosovoGUI.Kick
 		plr:kick("You're not in the kosovo gang and you executed a kosovo script : cheh")
 	end
 end
-coroutine.wrap(UXMCUQ_fake_script)()
+coroutine.wrap(TLWZC_fake_script)()
