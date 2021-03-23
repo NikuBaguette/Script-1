@@ -128,7 +128,7 @@ Version.BackgroundTransparency = 1.000
 Version.Position = UDim2.new(0.889217138, 0, 0.931818128, 0)
 Version.Size = UDim2.new(0, 75, 0, 30)
 Version.Font = Enum.Font.SourceSans
-Version.Text = "V.1.2"
+Version.Text = "V.1.3"
 Version.TextColor3 = Color3.fromRGB(0, 0, 0)
 Version.TextSize = 20.000
 
@@ -186,7 +186,7 @@ Open.TextSize = 30.000
 
 -- Scripts:
 
-local function HPLE_fake_script() -- Pilote.Mod 
+local function ASPI_fake_script() -- Pilote.Mod 
 	local script = Instance.new('LocalScript', Pilote)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -296,8 +296,8 @@ local function HPLE_fake_script() -- Pilote.Mod
 		coroutine.wrap(VJBMO_fake_script)()
 	end)
 end
-coroutine.wrap(HPLE_fake_script)()
-local function TAACUA_fake_script() -- Cosmetics.Cos 
+coroutine.wrap(ASPI_fake_script)()
+local function QHWYT_fake_script() -- Cosmetics.Cos 
 	local script = Instance.new('LocalScript', Cosmetics)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1698,8 +1698,8 @@ local function TAACUA_fake_script() -- Cosmetics.Cos
 		coroutine.wrap(DRYID_fake_script)()
 	end)
 end
-coroutine.wrap(TAACUA_fake_script)()
-local function VTAYTBC_fake_script() -- PlayerHealth.ESP 
+coroutine.wrap(QHWYT_fake_script)()
+local function HINBG_fake_script() -- PlayerHealth.ESP 
 	local script = Instance.new('LocalScript', PlayerHealth)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -2038,8 +2038,8 @@ local function VTAYTBC_fake_script() -- PlayerHealth.ESP
 		end)
 	end)
 end
-coroutine.wrap(VTAYTBC_fake_script)()
-local function CKNLYP_fake_script() -- GUI.Move 
+coroutine.wrap(HINBG_fake_script)()
+local function DZKRQD_fake_script() -- GUI.Move 
 	local script = Instance.new('LocalScript', GUI)
 
 	local UIS = game:GetService('UserInputService')
@@ -2112,8 +2112,8 @@ local function CKNLYP_fake_script() -- GUI.Move
 	
 	end)
 end
-coroutine.wrap(CKNLYP_fake_script)()
-local function DMNYQ_fake_script() -- DropCos.Drop 
+coroutine.wrap(DZKRQD_fake_script)()
+local function QLMGN_fake_script() -- DropCos.Drop 
 	local script = Instance.new('LocalScript', DropCos)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -2128,16 +2128,16 @@ local function DMNYQ_fake_script() -- DropCos.Drop
 		end)
 	end)
 end
-coroutine.wrap(DMNYQ_fake_script)()
-local function FHBVDL_fake_script() -- AutoFarm.AutoFarm 
+coroutine.wrap(QLMGN_fake_script)()
+local function VQAN_fake_script() -- AutoFarm.AutoFarm 
 	local script = Instance.new('LocalScript', AutoFarm)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/BunnySalf/Hentai/main/MHEEHUB", true))()
 	end)
 end
-coroutine.wrap(FHBVDL_fake_script)()
-local function DDPNV_fake_script() -- HideStand.Hide 
+coroutine.wrap(VQAN_fake_script)()
+local function LSQCQLB_fake_script() -- HideStand.Hide 
 	local script = Instance.new('LocalScript', HideStand)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -2199,8 +2199,8 @@ local function DDPNV_fake_script() -- HideStand.Hide
 		coroutine.wrap(EFDNDOR_fake_script)()
 	end)
 end
-coroutine.wrap(DDPNV_fake_script)()
-local function MMDA_fake_script() -- ItemF.Farm 
+coroutine.wrap(LSQCQLB_fake_script)()
+local function YEGXTFT_fake_script() -- ItemF.Farm 
 	local script = Instance.new('LocalScript', ItemF)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -2211,16 +2211,16 @@ local function MMDA_fake_script() -- ItemF.Farm
 	end)
 	
 end
-coroutine.wrap(MMDA_fake_script)()
-local function YTRCHQC_fake_script() -- InfinitY.INf 
+coroutine.wrap(YEGXTFT_fake_script)()
+local function MUKZE_fake_script() -- InfinitY.INf 
 	local script = Instance.new('LocalScript', InfinitY)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGet(("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source%27"),true))()
 	end)
 end
-coroutine.wrap(YTRCHQC_fake_script)()
-local function IOGHK_fake_script() -- RNG.Stand 
+coroutine.wrap(MUKZE_fake_script)()
+local function IGZHTB_fake_script() -- RNG.Stand 
 	local script = Instance.new('LocalScript', RNG)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -2342,8 +2342,8 @@ local function IOGHK_fake_script() -- RNG.Stand
 		coroutine.wrap(NVSS_fake_script)()
 	end)
 end
-coroutine.wrap(IOGHK_fake_script)()
-local function FBOX_fake_script() -- KosovoGUI.OpenAndHide 
+coroutine.wrap(IGZHTB_fake_script)()
+local function PUTTRM_fake_script() -- KosovoGUI.OpenAndHide 
 	local script = Instance.new('LocalScript', KosovoGUI)
 
 	script.Parent.HideOpen.Open.MouseButton1Click:Connect(function()
@@ -2356,8 +2356,8 @@ local function FBOX_fake_script() -- KosovoGUI.OpenAndHide
 		end
 	end)
 end
-coroutine.wrap(FBOX_fake_script)()
-local function YTRPRA_fake_script() -- KosovoGUI.Kick 
+coroutine.wrap(PUTTRM_fake_script)()
+local function UYTQX_fake_script() -- KosovoGUI.Kick 
 	local script = Instance.new('LocalScript', KosovoGUI)
 
 	local plr = game.Players.LocalPlayer
@@ -2367,4 +2367,4 @@ local function YTRPRA_fake_script() -- KosovoGUI.Kick
 		plr:kick("You're not in the kosovo gang and you executed a kosovo script : cheh")
 	end
 end
-coroutine.wrap(YTRPRA_fake_script)()
+coroutine.wrap(UYTQX_fake_script)()
