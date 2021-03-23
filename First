@@ -17,6 +17,7 @@ local Version = Instance.new("TextLabel")
 local OS = Instance.new("TextLabel")
 local InfinitY = Instance.new("TextButton")
 local RNG = Instance.new("TextButton")
+local Autiste = Instance.new("TextButton")
 local HideOpen = Instance.new("Frame")
 local Open = Instance.new("TextButton")
 
@@ -31,7 +32,6 @@ GUI.Parent = KosovoGUI
 GUI.BackgroundColor3 = Color3.fromRGB(65, 65, 65)
 GUI.Position = UDim2.new(0.286132246, 0, 0.159454316, 0)
 GUI.Size = UDim2.new(0, 677, 0, 440)
-GUI.Visible = false
 
 Pilote.Name = "Pilote"
 Pilote.Parent = GUI
@@ -39,10 +39,12 @@ Pilote.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Pilote.BackgroundTransparency = 0.850
 Pilote.Position = UDim2.new(0.0310192034, 0, 0.156818196, 0)
 Pilote.Size = UDim2.new(0, 200, 0, 50)
-Pilote.Font = Enum.Font.SourceSans
-Pilote.Text = "Pilote Mod"
-Pilote.TextColor3 = Color3.fromRGB(16, 34, 100)
+Pilote.Font = Enum.Font.Cartoon
+Pilote.Text = "Pilot Mod"
+Pilote.TextColor3 = Color3.fromRGB(31, 68, 200)
 Pilote.TextSize = 40.000
+Pilote.TextStrokeColor3 = Color3.fromRGB(8, 8, 8)
+Pilote.TextStrokeTransparency = 0.000
 
 Cosmetics.Name = "Cosmetics"
 Cosmetics.Parent = GUI
@@ -50,10 +52,12 @@ Cosmetics.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Cosmetics.BackgroundTransparency = 0.850
 Cosmetics.Position = UDim2.new(0.351550967, 0, 0.156818181, 0)
 Cosmetics.Size = UDim2.new(0, 200, 0, 50)
-Cosmetics.Font = Enum.Font.SourceSans
+Cosmetics.Font = Enum.Font.Cartoon
 Cosmetics.Text = "Cosmetics"
 Cosmetics.TextColor3 = Color3.fromRGB(180, 172, 82)
 Cosmetics.TextSize = 40.000
+Cosmetics.TextStrokeColor3 = Color3.fromRGB(8, 8, 8)
+Cosmetics.TextStrokeTransparency = 0.000
 
 PlayerHealth.Name = "PlayerHealth"
 PlayerHealth.Parent = GUI
@@ -61,10 +65,12 @@ PlayerHealth.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 PlayerHealth.BackgroundTransparency = 0.850
 PlayerHealth.Position = UDim2.new(0.6706056, 0, 0.156818181, 0)
 PlayerHealth.Size = UDim2.new(0, 200, 0, 50)
-PlayerHealth.Font = Enum.Font.SourceSans
-PlayerHealth.Text = "Players Health"
+PlayerHealth.Font = Enum.Font.Cartoon
+PlayerHealth.Text = "Players ESP"
 PlayerHealth.TextColor3 = Color3.fromRGB(177, 45, 47)
 PlayerHealth.TextSize = 40.000
+PlayerHealth.TextStrokeColor3 = Color3.fromRGB(8, 8, 8)
+PlayerHealth.TextStrokeTransparency = 0.000
 
 DropCos.Name = "DropCos"
 DropCos.Parent = GUI
@@ -72,10 +78,12 @@ DropCos.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 DropCos.BackgroundTransparency = 0.850
 DropCos.Position = UDim2.new(0.0310192015, 0, 0.318181813, 0)
 DropCos.Size = UDim2.new(0, 200, 0, 50)
-DropCos.Font = Enum.Font.SourceSans
+DropCos.Font = Enum.Font.Cartoon
 DropCos.Text = "Drop Hat"
 DropCos.TextColor3 = Color3.fromRGB(0, 149, 69)
 DropCos.TextSize = 40.000
+DropCos.TextStrokeColor3 = Color3.fromRGB(8, 8, 8)
+DropCos.TextStrokeTransparency = 0.000
 
 AutoFarm.Name = "AutoFarm"
 AutoFarm.Parent = GUI
@@ -83,10 +91,12 @@ AutoFarm.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 AutoFarm.BackgroundTransparency = 0.850
 AutoFarm.Position = UDim2.new(0.351550967, 0, 0.818181813, 0)
 AutoFarm.Size = UDim2.new(0, 200, 0, 50)
-AutoFarm.Font = Enum.Font.SourceSans
+AutoFarm.Font = Enum.Font.Cartoon
 AutoFarm.Text = "Auto Farm"
 AutoFarm.TextColor3 = Color3.fromRGB(134, 93, 56)
 AutoFarm.TextSize = 40.000
+AutoFarm.TextStrokeColor3 = Color3.fromRGB(8, 8, 8)
+AutoFarm.TextStrokeTransparency = 0.000
 
 HideStand.Name = "HideStand"
 HideStand.Parent = GUI
@@ -94,10 +104,12 @@ HideStand.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 HideStand.BackgroundTransparency = 0.850
 HideStand.Position = UDim2.new(0.6706056, 0, 0.318181813, 0)
 HideStand.Size = UDim2.new(0, 200, 0, 50)
-HideStand.Font = Enum.Font.SourceSans
+HideStand.Font = Enum.Font.Cartoon
 HideStand.Text = "Hide Stand"
 HideStand.TextColor3 = Color3.fromRGB(66, 173, 150)
 HideStand.TextSize = 40.000
+HideStand.TextStrokeColor3 = Color3.fromRGB(8, 8, 8)
+HideStand.TextStrokeTransparency = 0.000
 
 Creddi.Name = "Creddi"
 Creddi.Parent = GUI
@@ -105,7 +117,7 @@ Creddi.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Creddi.BackgroundTransparency = 1.000
 Creddi.Position = UDim2.new(0.361890703, 0, 0.0204545446, 0)
 Creddi.Size = UDim2.new(0, 200, 0, 50)
-Creddi.Font = Enum.Font.SourceSans
+Creddi.Font = Enum.Font.Cartoon
 Creddi.Text = "Made By NikuBaguette with other script"
 Creddi.TextColor3 = Color3.fromRGB(0, 0, 0)
 Creddi.TextSize = 40.000
@@ -116,10 +128,12 @@ ItemF.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ItemF.BackgroundTransparency = 0.850
 ItemF.Position = UDim2.new(0.0310192015, 0, 0.818181872, 0)
 ItemF.Size = UDim2.new(0, 200, 0, 50)
-ItemF.Font = Enum.Font.SourceSans
+ItemF.Font = Enum.Font.Cartoon
 ItemF.Text = "Item Farm"
 ItemF.TextColor3 = Color3.fromRGB(203, 26, 64)
 ItemF.TextSize = 40.000
+ItemF.TextStrokeColor3 = Color3.fromRGB(8, 8, 8)
+ItemF.TextStrokeTransparency = 0.000
 
 Version.Name = "Version"
 Version.Parent = GUI
@@ -127,8 +141,8 @@ Version.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Version.BackgroundTransparency = 1.000
 Version.Position = UDim2.new(0.889217138, 0, 0.931818128, 0)
 Version.Size = UDim2.new(0, 75, 0, 30)
-Version.Font = Enum.Font.SourceSans
-Version.Text = "V.1.3"
+Version.Font = Enum.Font.Roboto
+Version.Text = "V.1.4"
 Version.TextColor3 = Color3.fromRGB(0, 0, 0)
 Version.TextSize = 20.000
 
@@ -137,7 +151,7 @@ OS.Parent = GUI
 OS.BackgroundColor3 = Color3.fromRGB(16, 85, 73)
 OS.Position = UDim2.new(0, 0, 0.720454574, 0)
 OS.Size = UDim2.new(0, 677, 0, 32)
-OS.Font = Enum.Font.SourceSans
+OS.Font = Enum.Font.Cartoon
 OS.Text = "Only Synapse"
 OS.TextColor3 = Color3.fromRGB(0, 0, 0)
 OS.TextSize = 30.000
@@ -149,10 +163,12 @@ InfinitY.BackgroundTransparency = 0.850
 InfinitY.BorderColor3 = Color3.fromRGB(27, 42, 53)
 InfinitY.Position = UDim2.new(0.351550967, 0, 0.318181813, 0)
 InfinitY.Size = UDim2.new(0, 200, 0, 50)
-InfinitY.Font = Enum.Font.SourceSans
-InfinitY.Text = "Infinit Yield"
+InfinitY.Font = Enum.Font.Cartoon
+InfinitY.Text = "Inf Yield"
 InfinitY.TextColor3 = Color3.fromRGB(159, 47, 135)
 InfinitY.TextSize = 40.000
+InfinitY.TextStrokeColor3 = Color3.fromRGB(8, 8, 8)
+InfinitY.TextStrokeTransparency = 0.000
 
 RNG.Name = "RNG"
 RNG.Parent = GUI
@@ -161,10 +177,25 @@ RNG.BackgroundTransparency = 0.850
 RNG.BorderSizePixel = 0
 RNG.Position = UDim2.new(0.0310192015, 0, 0.472727269, 0)
 RNG.Size = UDim2.new(0, 200, 0, 50)
-RNG.Font = Enum.Font.SourceSans
+RNG.Font = Enum.Font.Cartoon
 RNG.Text = "RNG Stand"
 RNG.TextColor3 = Color3.fromRGB(164, 173, 152)
 RNG.TextSize = 40.000
+RNG.TextStrokeColor3 = Color3.fromRGB(8, 8, 8)
+RNG.TextStrokeTransparency = 0.000
+
+Autiste.Name = "Autiste"
+Autiste.Parent = GUI
+Autiste.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Autiste.BackgroundTransparency = 0.850
+Autiste.Position = UDim2.new(0.351550967, 0, 0.472727269, 0)
+Autiste.Size = UDim2.new(0, 200, 0, 50)
+Autiste.Font = Enum.Font.Cartoon
+Autiste.Text = "Be Autistic"
+Autiste.TextColor3 = Color3.fromRGB(249, 222, 116)
+Autiste.TextSize = 40.000
+Autiste.TextStrokeColor3 = Color3.fromRGB(8, 8, 8)
+Autiste.TextStrokeTransparency = 0.000
 
 HideOpen.Name = "HideOpen"
 HideOpen.Parent = KosovoGUI
@@ -186,7 +217,7 @@ Open.TextSize = 30.000
 
 -- Scripts:
 
-local function ASPI_fake_script() -- Pilote.Mod 
+local function IEEEFC_fake_script() -- Pilote.Mod 
 	local script = Instance.new('LocalScript', Pilote)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -296,8 +327,8 @@ local function ASPI_fake_script() -- Pilote.Mod
 		coroutine.wrap(VJBMO_fake_script)()
 	end)
 end
-coroutine.wrap(ASPI_fake_script)()
-local function QHWYT_fake_script() -- Cosmetics.Cos 
+coroutine.wrap(IEEEFC_fake_script)()
+local function ZJYUMRJ_fake_script() -- Cosmetics.Cos 
 	local script = Instance.new('LocalScript', Cosmetics)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1698,8 +1729,8 @@ local function QHWYT_fake_script() -- Cosmetics.Cos
 		coroutine.wrap(DRYID_fake_script)()
 	end)
 end
-coroutine.wrap(QHWYT_fake_script)()
-local function HINBG_fake_script() -- PlayerHealth.ESP 
+coroutine.wrap(ZJYUMRJ_fake_script)()
+local function CCMC_fake_script() -- PlayerHealth.ESP 
 	local script = Instance.new('LocalScript', PlayerHealth)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -2038,8 +2069,8 @@ local function HINBG_fake_script() -- PlayerHealth.ESP
 		end)
 	end)
 end
-coroutine.wrap(HINBG_fake_script)()
-local function DZKRQD_fake_script() -- GUI.Move 
+coroutine.wrap(CCMC_fake_script)()
+local function IQHF_fake_script() -- GUI.Move 
 	local script = Instance.new('LocalScript', GUI)
 
 	local UIS = game:GetService('UserInputService')
@@ -2112,8 +2143,8 @@ local function DZKRQD_fake_script() -- GUI.Move
 	
 	end)
 end
-coroutine.wrap(DZKRQD_fake_script)()
-local function QLMGN_fake_script() -- DropCos.Drop 
+coroutine.wrap(IQHF_fake_script)()
+local function KVZYV_fake_script() -- DropCos.Drop 
 	local script = Instance.new('LocalScript', DropCos)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -2128,16 +2159,16 @@ local function QLMGN_fake_script() -- DropCos.Drop
 		end)
 	end)
 end
-coroutine.wrap(QLMGN_fake_script)()
-local function VQAN_fake_script() -- AutoFarm.AutoFarm 
+coroutine.wrap(KVZYV_fake_script)()
+local function XIHZNP_fake_script() -- AutoFarm.AutoFarm 
 	local script = Instance.new('LocalScript', AutoFarm)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/BunnySalf/Hentai/main/MHEEHUB", true))()
 	end)
 end
-coroutine.wrap(VQAN_fake_script)()
-local function LSQCQLB_fake_script() -- HideStand.Hide 
+coroutine.wrap(XIHZNP_fake_script)()
+local function ZASOZJX_fake_script() -- HideStand.Hide 
 	local script = Instance.new('LocalScript', HideStand)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -2199,8 +2230,8 @@ local function LSQCQLB_fake_script() -- HideStand.Hide
 		coroutine.wrap(EFDNDOR_fake_script)()
 	end)
 end
-coroutine.wrap(LSQCQLB_fake_script)()
-local function YEGXTFT_fake_script() -- ItemF.Farm 
+coroutine.wrap(ZASOZJX_fake_script)()
+local function JHNX_fake_script() -- ItemF.Farm 
 	local script = Instance.new('LocalScript', ItemF)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -2211,16 +2242,16 @@ local function YEGXTFT_fake_script() -- ItemF.Farm
 	end)
 	
 end
-coroutine.wrap(YEGXTFT_fake_script)()
-local function MUKZE_fake_script() -- InfinitY.INf 
+coroutine.wrap(JHNX_fake_script)()
+local function HHWHH_fake_script() -- InfinitY.INf 
 	local script = Instance.new('LocalScript', InfinitY)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGet(("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source%27"),true))()
 	end)
 end
-coroutine.wrap(MUKZE_fake_script)()
-local function IGZHTB_fake_script() -- RNG.Stand 
+coroutine.wrap(HHWHH_fake_script)()
+local function SIUNAIV_fake_script() -- RNG.Stand 
 	local script = Instance.new('LocalScript', RNG)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -2342,8 +2373,26 @@ local function IGZHTB_fake_script() -- RNG.Stand
 		coroutine.wrap(NVSS_fake_script)()
 	end)
 end
-coroutine.wrap(IGZHTB_fake_script)()
-local function PUTTRM_fake_script() -- KosovoGUI.OpenAndHide 
+coroutine.wrap(SIUNAIV_fake_script)()
+local function DWXWB_fake_script() -- Autiste.Autiscript 
+	local script = Instance.new('LocalScript', Autiste)
+
+	local plr = game.Players.LocalPlayer.Name
+	local Parti = game.Workspace.Living:FindFirstChild(plr)
+	script.Parent.MouseButton1Click:Connect(function()
+		Parti.Head.face.Texture = "http://www.roblox.com/asset/?id=7699086"
+		Parti.LeftUpperArm.LeftShoulder:Destroy()
+		Parti.LeftLowerArm.LeftElbow:Destroy()
+		Parti.LeftHand.LeftWrist:Destroy()
+		Parti.RightHand.RightWrist:Destroy()
+		Parti.RightLowerArm.RightElbow:Destroy()
+		Parti.RightUpperArm.RightShoulder:Destroy()
+		Parti.Shirt:Destroy()
+		Parti:WaitForChild("Shirt Graphic"):Destroy()
+	end)
+end
+coroutine.wrap(DWXWB_fake_script)()
+local function TPQRN_fake_script() -- KosovoGUI.OpenAndHide 
 	local script = Instance.new('LocalScript', KosovoGUI)
 
 	script.Parent.HideOpen.Open.MouseButton1Click:Connect(function()
@@ -2356,8 +2405,8 @@ local function PUTTRM_fake_script() -- KosovoGUI.OpenAndHide
 		end
 	end)
 end
-coroutine.wrap(PUTTRM_fake_script)()
-local function UYTQX_fake_script() -- KosovoGUI.Kick 
+coroutine.wrap(TPQRN_fake_script)()
+local function UXMCUQ_fake_script() -- KosovoGUI.Kick 
 	local script = Instance.new('LocalScript', KosovoGUI)
 
 	local plr = game.Players.LocalPlayer
@@ -2367,4 +2416,4 @@ local function UYTQX_fake_script() -- KosovoGUI.Kick
 		plr:kick("You're not in the kosovo gang and you executed a kosovo script : cheh")
 	end
 end
-coroutine.wrap(UYTQX_fake_script)()
+coroutine.wrap(UXMCUQ_fake_script)()
