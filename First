@@ -1,0 +1,2364 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local KosovoGUI = Instance.new("ScreenGui")
+local GUI = Instance.new("Frame")
+local Pilote = Instance.new("TextButton")
+local Cosmetics = Instance.new("TextButton")
+local PlayerHealth = Instance.new("TextButton")
+local DropCos = Instance.new("TextButton")
+local AutoFarm = Instance.new("TextButton")
+local HideStand = Instance.new("TextButton")
+local Creddi = Instance.new("TextLabel")
+local ItemF = Instance.new("TextButton")
+local Version = Instance.new("TextLabel")
+local OS = Instance.new("TextLabel")
+local InfinitY = Instance.new("TextButton")
+local RNG = Instance.new("TextButton")
+local HideOpen = Instance.new("Frame")
+local Open = Instance.new("TextButton")
+
+--Properties:
+
+KosovoGUI.Name = "KosovoGUI"
+KosovoGUI.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+KosovoGUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+GUI.Name = "GUI"
+GUI.Parent = KosovoGUI
+GUI.BackgroundColor3 = Color3.fromRGB(65, 65, 65)
+GUI.Position = UDim2.new(0.286132246, 0, 0.159454316, 0)
+GUI.Size = UDim2.new(0, 677, 0, 440)
+
+Pilote.Name = "Pilote"
+Pilote.Parent = GUI
+Pilote.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Pilote.BackgroundTransparency = 0.850
+Pilote.Position = UDim2.new(0.0310192034, 0, 0.156818196, 0)
+Pilote.Size = UDim2.new(0, 200, 0, 50)
+Pilote.Font = Enum.Font.SourceSans
+Pilote.Text = "Pilote Mod"
+Pilote.TextColor3 = Color3.fromRGB(16, 34, 100)
+Pilote.TextSize = 40.000
+
+Cosmetics.Name = "Cosmetics"
+Cosmetics.Parent = GUI
+Cosmetics.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Cosmetics.BackgroundTransparency = 0.850
+Cosmetics.Position = UDim2.new(0.351550967, 0, 0.156818181, 0)
+Cosmetics.Size = UDim2.new(0, 200, 0, 50)
+Cosmetics.Font = Enum.Font.SourceSans
+Cosmetics.Text = "Cosmetics"
+Cosmetics.TextColor3 = Color3.fromRGB(180, 172, 82)
+Cosmetics.TextSize = 40.000
+
+PlayerHealth.Name = "PlayerHealth"
+PlayerHealth.Parent = GUI
+PlayerHealth.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PlayerHealth.BackgroundTransparency = 0.850
+PlayerHealth.Position = UDim2.new(0.6706056, 0, 0.156818181, 0)
+PlayerHealth.Size = UDim2.new(0, 200, 0, 50)
+PlayerHealth.Font = Enum.Font.SourceSans
+PlayerHealth.Text = "Players Health"
+PlayerHealth.TextColor3 = Color3.fromRGB(177, 45, 47)
+PlayerHealth.TextSize = 40.000
+
+DropCos.Name = "DropCos"
+DropCos.Parent = GUI
+DropCos.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+DropCos.BackgroundTransparency = 0.850
+DropCos.Position = UDim2.new(0.0310192015, 0, 0.318181813, 0)
+DropCos.Size = UDim2.new(0, 200, 0, 50)
+DropCos.Font = Enum.Font.SourceSans
+DropCos.Text = "Drop Hat"
+DropCos.TextColor3 = Color3.fromRGB(0, 149, 69)
+DropCos.TextSize = 40.000
+
+AutoFarm.Name = "AutoFarm"
+AutoFarm.Parent = GUI
+AutoFarm.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+AutoFarm.BackgroundTransparency = 0.850
+AutoFarm.Position = UDim2.new(0.351550967, 0, 0.818181813, 0)
+AutoFarm.Size = UDim2.new(0, 200, 0, 50)
+AutoFarm.Font = Enum.Font.SourceSans
+AutoFarm.Text = "Auto Farm"
+AutoFarm.TextColor3 = Color3.fromRGB(134, 93, 56)
+AutoFarm.TextSize = 40.000
+
+HideStand.Name = "HideStand"
+HideStand.Parent = GUI
+HideStand.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+HideStand.BackgroundTransparency = 0.850
+HideStand.Position = UDim2.new(0.6706056, 0, 0.318181813, 0)
+HideStand.Size = UDim2.new(0, 200, 0, 50)
+HideStand.Font = Enum.Font.SourceSans
+HideStand.Text = "Hide Stand"
+HideStand.TextColor3 = Color3.fromRGB(66, 173, 150)
+HideStand.TextSize = 40.000
+
+Creddi.Name = "Creddi"
+Creddi.Parent = GUI
+Creddi.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Creddi.BackgroundTransparency = 1.000
+Creddi.Position = UDim2.new(0.361890703, 0, 0.0204545446, 0)
+Creddi.Size = UDim2.new(0, 200, 0, 50)
+Creddi.Font = Enum.Font.SourceSans
+Creddi.Text = "Made By NikuBaguette with other script"
+Creddi.TextColor3 = Color3.fromRGB(0, 0, 0)
+Creddi.TextSize = 40.000
+
+ItemF.Name = "ItemF"
+ItemF.Parent = GUI
+ItemF.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ItemF.BackgroundTransparency = 0.850
+ItemF.Position = UDim2.new(0.0310192015, 0, 0.818181872, 0)
+ItemF.Size = UDim2.new(0, 200, 0, 50)
+ItemF.Font = Enum.Font.SourceSans
+ItemF.Text = "Item Farm"
+ItemF.TextColor3 = Color3.fromRGB(203, 26, 64)
+ItemF.TextSize = 40.000
+
+Version.Name = "Version"
+Version.Parent = GUI
+Version.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Version.BackgroundTransparency = 1.000
+Version.Position = UDim2.new(0.889217138, 0, 0.931818128, 0)
+Version.Size = UDim2.new(0, 75, 0, 30)
+Version.Font = Enum.Font.SourceSans
+Version.Text = "V.1.2"
+Version.TextColor3 = Color3.fromRGB(0, 0, 0)
+Version.TextSize = 20.000
+
+OS.Name = "OS"
+OS.Parent = GUI
+OS.BackgroundColor3 = Color3.fromRGB(16, 85, 73)
+OS.Position = UDim2.new(0, 0, 0.720454574, 0)
+OS.Size = UDim2.new(0, 677, 0, 32)
+OS.Font = Enum.Font.SourceSans
+OS.Text = "Only Synapse"
+OS.TextColor3 = Color3.fromRGB(0, 0, 0)
+OS.TextSize = 30.000
+
+InfinitY.Name = "InfinitY"
+InfinitY.Parent = GUI
+InfinitY.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+InfinitY.BackgroundTransparency = 0.850
+InfinitY.BorderColor3 = Color3.fromRGB(27, 42, 53)
+InfinitY.Position = UDim2.new(0.351550967, 0, 0.318181813, 0)
+InfinitY.Size = UDim2.new(0, 200, 0, 50)
+InfinitY.Font = Enum.Font.SourceSans
+InfinitY.Text = "Infinit Yield"
+InfinitY.TextColor3 = Color3.fromRGB(159, 47, 135)
+InfinitY.TextSize = 40.000
+
+RNG.Name = "RNG"
+RNG.Parent = GUI
+RNG.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+RNG.BackgroundTransparency = 0.850
+RNG.BorderSizePixel = 0
+RNG.Position = UDim2.new(0.0310192015, 0, 0.472727269, 0)
+RNG.Size = UDim2.new(0, 200, 0, 50)
+RNG.Font = Enum.Font.SourceSans
+RNG.Text = "RNG Stand"
+RNG.TextColor3 = Color3.fromRGB(164, 173, 152)
+RNG.TextSize = 40.000
+
+HideOpen.Name = "HideOpen"
+HideOpen.Parent = KosovoGUI
+HideOpen.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+HideOpen.BackgroundTransparency = 1.000
+HideOpen.Position = UDim2.new(-0.000478581176, 0, 0.56789428, 0)
+HideOpen.Size = UDim2.new(0, 70, 0, 25)
+
+Open.Name = "Open"
+Open.Parent = HideOpen
+Open.BackgroundColor3 = Color3.fromRGB(84, 31, 150)
+Open.BackgroundTransparency = 0.700
+Open.Position = UDim2.new(-0.011235483, 0, 3.57627869e-07, 0)
+Open.Size = UDim2.new(0, 70, 0, 25)
+Open.Font = Enum.Font.SourceSans
+Open.Text = "Hide"
+Open.TextColor3 = Color3.fromRGB(0, 0, 0)
+Open.TextSize = 30.000
+
+-- Scripts:
+
+local function YEPT_fake_script() -- Pilote.Mod 
+	local script = Instance.new('LocalScript', Pilote)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local ScreenGui = Instance.new("ScreenGui")
+		local Pilot = Instance.new("TextButton")
+		local TextButton = Instance.new("TextButton")
+		local TextLabel = Instance.new("TextLabel")
+	
+	
+	
+		ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+		ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+		ScreenGui.ResetOnSpawn = false
+	
+		Pilot.Name = "Pilot"
+		Pilot.Parent = ScreenGui
+		Pilot.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
+		Pilot.BorderColor3 = Color3.fromRGB(0, 0, 0)
+		Pilot.BorderSizePixel = 2
+		Pilot.Position = UDim2.new(0.856776357, 0, 0.413897902, 0)
+		Pilot.Size = UDim2.new(0.143223614, 0, 0.0332764797, 0)
+		Pilot.Font = Enum.Font.Cartoon
+		Pilot.Text = "Active pilot mode"
+		Pilot.TextColor3 = Color3.fromRGB(255, 255, 255)
+		Pilot.TextScaled = true
+		Pilot.TextSize = 14.000
+		Pilot.TextStrokeTransparency = 0.000
+		Pilot.TextWrapped = true
+	
+		TextButton.Parent = ScreenGui
+		TextButton.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
+		TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+		TextButton.BorderSizePixel = 2
+		TextButton.Position = UDim2.new(0.836000025, 0, 0.414000005, 0)
+		TextButton.Size = UDim2.new(0.0200513061, 0, 0.0332764797, 0)
+		TextButton.Font = Enum.Font.SourceSans
+		TextButton.Text = ">"
+		TextButton.TextColor3 = Color3.fromRGB(199, 0, 0)
+		TextButton.TextScaled = true
+		TextButton.TextSize = 14.000
+		TextButton.TextStrokeTransparency = 0.000
+		TextButton.TextWrapped = true
+	
+		TextLabel.Parent = ScreenGui
+		TextLabel.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
+		TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+		TextLabel.BorderSizePixel = 2
+		TextLabel.Position = UDim2.new(0.856776416, 0, 0.412776411, 0)
+		TextLabel.Size = UDim2.new(0.142718449, 0, 0.0343980342, 0)
+		TextLabel.Visible = false
+		TextLabel.Font = Enum.Font.Cartoon
+		TextLabel.Text = "Pilot mode activated!"
+		TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+		TextLabel.TextScaled = true
+		TextLabel.TextSize = 14.000
+		TextLabel.TextStrokeTransparency = 0.000
+		TextLabel.TextWrapped = true
+	
+	
+	
+		local function WJRQL_fake_script() 
+			local script = Instance.new('LocalScript', Pilot)
+	
+	
+	
+			local kouby = true
+			local plr = game.Players.LocalPlayer.Name
+			local root = game.Workspace.Living:FindFirstChild(plr).LowerTorso.Root
+			script.Parent.MouseButton1Click:Connect(function()
+				if kouby == true then
+					kouby = false
+					game.Workspace.Living:FindFirstChild(plr).LowerTorso.Root:Destroy()
+					script.Parent.Parent.Pilot.Text = "Pilot activated!"
+					wait(2)
+					script.Parent.Parent.Pilot.Text = "Active Pilot mode"
+				else
+					kouby = true
+					script.Parent.Parent.Pilot.Text = "Pilot mode is activated!"
+					wait(2)
+					script.Parent.Parent.Pilot.Text = "Active pilot mode"
+				end
+			end)
+	
+	
+		end
+		coroutine.wrap(WJRQL_fake_script)()
+		local function VJBMO_fake_script()
+			local script = Instance.new('LocalScript', TextButton)
+	
+			local kosovo = true
+			script.Parent.MouseButton1Click:Connect(function()
+				if kosovo == true then
+					kosovo = false
+					script.Parent.Parent.Pilot:TweenPosition(UDim2.new(0.999, 0,0.414, 0),"Out","Linear",0.3)
+					script.Parent.Parent.TextButton.Text = "<"
+					script.Parent.Parent.TextButton:TweenPosition(UDim2.new(0.986, 0,0.414, 0),"Out","Linear",0.3)
+				else
+					kosovo = true
+					script.Parent.Parent.Pilot:TweenPosition(UDim2.new(0.857, 0,0.414, 0),"Out","Linear",0.3)
+					script.Parent.Parent.TextButton.Text = ">"
+					script.Parent.Parent.TextButton:TweenPosition(UDim2.new(0.836, 0,0.414, 0),"Out","Linear",0.3)
+	
+				end
+			end)
+	
+		end
+		coroutine.wrap(VJBMO_fake_script)()
+	end)
+end
+coroutine.wrap(YEPT_fake_script)()
+local function PGRI_fake_script() -- Cosmetics.Cos 
+	local script = Instance.new('LocalScript', Cosmetics)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		-- Gui to Lua
+		-- Version: 3.2
+	
+		-- Instances:
+	
+		local COS = Instance.new("ScreenGui")
+		local Frame = Instance.new("Frame")
+		local ScrollingFrame = Instance.new("ScrollingFrame")
+		local ABBACCHIO = Instance.new("TextButton")
+		local ANASUI = Instance.new("TextButton")
+		local AVDOL = Instance.new("TextButton")
+		local BUCCIARATI = Instance.new("TextButton")
+		local DIAVOLO = Instance.new("TextButton")
+		local DIEGO = Instance.new("TextButton")
+		local DIOOH = Instance.new("TextButton")
+		local DIOP1 = Instance.new("TextButton")
+		local DIOP3 = Instance.new("TextButton")
+		local GYRO = Instance.new("TextButton")
+		local JOLYNE = Instance.new("TextButton")
+		local JOTAROP3 = Instance.new("TextButton")
+		local JOTAROP3V2 = Instance.new("TextButton")
+		local JOTAROP4 = Instance.new("TextButton")
+		local KIRA = Instance.new("TextButton")
+		local KOICHI = Instance.new("TextButton")
+		local JOHNNY = Instance.new("TextButton")
+		local JONATHAN = Instance.new("TextButton")
+		local JOSEFUMI = Instance.new("TextButton")
+		local JOSUKE = Instance.new("TextButton")
+		local KAKYOIN = Instance.new("TextButton")
+		local KARS = Instance.new("TextButton")
+		local MISTA = Instance.new("TextButton")
+		local FULLZEPPELI = Instance.new("TextButton")
+		local NARANCIA = Instance.new("TextButton")
+		local HERMES = Instance.new("TextButton")
+		local PUCCI = Instance.new("TextButton")
+		local VALENTINE = Instance.new("TextButton")
+		local GIORNO = Instance.new("TextButton")
+		local DOPPIO = Instance.new("TextButton")
+		local FUGO = Instance.new("TextButton")
+		local POLNAREFF = Instance.new("TextButton")
+		local SHINYANASUI = Instance.new("TextButton")
+		local SHINYABBACCHIO = Instance.new("TextButton")
+		local ZEPPELI = Instance.new("TextButton")
+		local JOSEPHP2 = Instance.new("TextButton")
+		local TRISH = Instance.new("TextButton")
+		local ROHAN = Instance.new("TextButton")
+		local RISOTTO = Instance.new("TextButton")
+		local JOSEPHP3 = Instance.new("TextButton")
+		local SHINYDOPPIO = Instance.new("TextButton")
+		local SHINYMISTA = Instance.new("TextButton")
+		local SHINYDIO = Instance.new("TextButton")
+		local SHINYDIEGO = Instance.new("TextButton")
+		local SHINYKOICHI = Instance.new("TextButton")
+		local SHINYKAKYOIN = Instance.new("TextButton")
+		local SHINYJOHNNY = Instance.new("TextButton")
+		local SHINYPOLNAREFF = Instance.new("TextButton")
+		local STONEMASK = Instance.new("TextButton")
+		local SHINYJOSEPHP2 = Instance.new("TextButton")
+		local SHINYTRISH = Instance.new("TextButton")
+		local SHINYGYRO = Instance.new("TextButton")
+		local x = Instance.new("TextButton")
+		local TextLabel = Instance.new("TextLabel")
+		local minus = Instance.new("TextButton")
+		local Frame_2 = Instance.new("Frame")
+	
+		--Properties:
+	
+		COS.Name = "COS"
+		COS.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+		COS.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+		COS.ResetOnSpawn = false
+	
+		Frame.Parent = COS
+		Frame.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+		Frame.BackgroundTransparency = 1.000
+		Frame.BorderSizePixel = 0
+		Frame.Position = UDim2.new(0.212889209, 0, 0.275184274, 0)
+		Frame.Size = UDim2.new(0, 410, 0, 240)
+	
+		ScrollingFrame.Parent = Frame
+		ScrollingFrame.Active = true
+		ScrollingFrame.AnchorPoint = Vector2.new(0.5, 0)
+		ScrollingFrame.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+		ScrollingFrame.BorderSizePixel = 0
+		ScrollingFrame.Position = UDim2.new(0.502439022, 0, 0.1033905, 0)
+		ScrollingFrame.Size = UDim2.new(0, 408, 0, 226)
+		ScrollingFrame.CanvasSize = UDim2.new(0, 0, 3, 0)
+		ScrollingFrame.ScrollBarThickness = 8
+	
+		ABBACCHIO.Name = "ABBACCHIO"
+		ABBACCHIO.Parent = ScrollingFrame
+		ABBACCHIO.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+		ABBACCHIO.BorderSizePixel = 0
+		ABBACCHIO.Position = UDim2.new(0.0249480251, 0, 0.159999996, 0)
+		ABBACCHIO.Size = UDim2.new(0, 83, 0, 27)
+		ABBACCHIO.Font = Enum.Font.FredokaOne
+		ABBACCHIO.Text = "Abbacchio"
+		ABBACCHIO.TextColor3 = Color3.fromRGB(255, 255, 255)
+		ABBACCHIO.TextScaled = true
+		ABBACCHIO.TextSize = 14.000
+		ABBACCHIO.TextWrapped = true
+	
+		ANASUI.Name = "ANASUI"
+		ANASUI.Parent = ScrollingFrame
+		ANASUI.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+		ANASUI.BorderSizePixel = 0
+		ANASUI.Position = UDim2.new(0.257061303, 0, 0.159999996, 0)
+		ANASUI.Size = UDim2.new(0, 83, 0, 27)
+		ANASUI.Font = Enum.Font.FredokaOne
+		ANASUI.Text = "Anasui"
+		ANASUI.TextColor3 = Color3.fromRGB(255, 255, 255)
+		ANASUI.TextScaled = true
+		ANASUI.TextSize = 14.000
+		ANASUI.TextWrapped = true
+	
+		AVDOL.Name = "AVDOL"
+		AVDOL.Parent = ScrollingFrame
+		AVDOL.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+		AVDOL.BorderSizePixel = 0
+		AVDOL.Position = UDim2.new(0.492965132, 0, 0.159999996, 0)
+		AVDOL.Size = UDim2.new(0, 83, 0, 27)
+		AVDOL.Font = Enum.Font.FredokaOne
+		AVDOL.Text = "Avdol"
+		AVDOL.TextColor3 = Color3.fromRGB(255, 255, 255)
+		AVDOL.TextScaled = true
+		AVDOL.TextSize = 14.000
+		AVDOL.TextWrapped = true
+	
+		BUCCIARATI.Name = "BUCCIARATI"
+		BUCCIARATI.Parent = ScrollingFrame
+		BUCCIARATI.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+		BUCCIARATI.BorderSizePixel = 0
+		BUCCIARATI.Position = UDim2.new(0.734763622, 0, 0.159999996, 0)
+		BUCCIARATI.Size = UDim2.new(0, 83, 0, 27)
+		BUCCIARATI.Font = Enum.Font.FredokaOne
+		BUCCIARATI.Text = "Bucciarati"
+		BUCCIARATI.TextColor3 = Color3.fromRGB(255, 255, 255)
+		BUCCIARATI.TextScaled = true
+		BUCCIARATI.TextSize = 14.000
+		BUCCIARATI.TextWrapped = true
+	
+		DIAVOLO.Name = "DIAVOLO"
+		DIAVOLO.Parent = ScrollingFrame
+		DIAVOLO.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+		DIAVOLO.BorderSizePixel = 0
+		DIAVOLO.Position = UDim2.new(0.0249480251, 0, 0.241619468, 0)
+		DIAVOLO.Size = UDim2.new(0, 83, 0, 27)
+		DIAVOLO.Font = Enum.Font.FredokaOne
+		DIAVOLO.Text = "Diavolo"
+		DIAVOLO.TextColor3 = Color3.fromRGB(255, 255, 255)
+		DIAVOLO.TextScaled = true
+		DIAVOLO.TextSize = 14.000
+		DIAVOLO.TextWrapped = true
+	
+		DIEGO.Name = "DIEGO"
+		DIEGO.Parent = ScrollingFrame
+		DIEGO.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+		DIEGO.BorderSizePixel = 0
+		DIEGO.Position = UDim2.new(0.257061303, 0, 0.241619468, 0)
+		DIEGO.Size = UDim2.new(0, 83, 0, 27)
+		DIEGO.Font = Enum.Font.FredokaOne
+		DIEGO.Text = "Diego Brando"
+		DIEGO.TextColor3 = Color3.fromRGB(255, 255, 255)
+		DIEGO.TextScaled = true
+		DIEGO.TextSize = 14.000
+		DIEGO.TextWrapped = true
+	
+		DIOOH.Name = "DIOOH"
+		DIOOH.Parent = ScrollingFrame
+		DIOOH.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+		DIOOH.BorderSizePixel = 0
+		DIOOH.Position = UDim2.new(0.492965132, 0, 0.241619468, 0)
+		DIOOH.Size = UDim2.new(0, 83, 0, 27)
+		DIOOH.Font = Enum.Font.FredokaOne
+		DIOOH.Text = "DIO (Over Heaven)"
+		DIOOH.TextColor3 = Color3.fromRGB(255, 255, 255)
+		DIOOH.TextScaled = true
+		DIOOH.TextSize = 14.000
+		DIOOH.TextWrapped = true
+	
+		DIOP1.Name = "DIOP1"
+		DIOP1.Parent = ScrollingFrame
+		DIOP1.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+		DIOP1.BorderSizePixel = 0
+		DIOP1.Position = UDim2.new(0.0249480251, 0, 0.00861373171, 0)
+		DIOP1.Size = UDim2.new(0, 83, 0, 27)
+		DIOP1.Font = Enum.Font.FredokaOne
+		DIOP1.Text = "DIO P1"
+		DIOP1.TextColor3 = Color3.fromRGB(255, 255, 255)
+		DIOP1.TextScaled = true
+		DIOP1.TextSize = 14.000
+		DIOP1.TextWrapped = true
+	
+		DIOP3.Name = "DIOP3"
+		DIOP3.Parent = ScrollingFrame
+		DIOP3.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+		DIOP3.BorderSizePixel = 0
+		DIOP3.Position = UDim2.new(0.734763622, 0, 0.241619468, 0)
+		DIOP3.Size = UDim2.new(0, 83, 0, 27)
+		DIOP3.Font = Enum.Font.FredokaOne
+		DIOP3.Text = "DIO P3"
+		DIOP3.TextColor3 = Color3.fromRGB(255, 255, 255)
+		DIOP3.TextScaled = true
+		DIOP3.TextSize = 14.000
+		DIOP3.TextWrapped = true
+	
+		GYRO.Name = "GYRO"
+		GYRO.Parent = ScrollingFrame
+		GYRO.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+		GYRO.BorderSizePixel = 0
+		GYRO.Position = UDim2.new(0.492965132, 0, 0.082810089, 0)
+		GYRO.Size = UDim2.new(0, 83, 0, 27)
+		GYRO.Font = Enum.Font.FredokaOne
+		GYRO.Text = "GYRO ZEPPELI"
+		GYRO.TextColor3 = Color3.fromRGB(255, 255, 255)
+		GYRO.TextScaled = true
+		GYRO.TextSize = 14.000
+		GYRO.TextWrapped = true
+	
+		JOLYNE.Name = "JOLYNE"
+		JOLYNE.Parent = ScrollingFrame
+		JOLYNE.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+		JOLYNE.BorderSizePixel = 0
+		JOLYNE.Position = UDim2.new(0.492965132, 0, 0.00861373171, 0)
+		JOLYNE.Size = UDim2.new(0, 83, 0, 27)
+		JOLYNE.Font = Enum.Font.FredokaOne
+		JOLYNE.Text = "Jolyne"
+		JOLYNE.TextColor3 = Color3.fromRGB(255, 255, 255)
+		JOLYNE.TextScaled = true
+		JOLYNE.TextSize = 14.000
+		JOLYNE.TextWrapped = true
+	
+		JOTAROP3.Name = "JOTAROP3"
+		JOTAROP3.Parent = ScrollingFrame
+		JOTAROP3.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+		JOTAROP3.BorderSizePixel = 0
+		JOTAROP3.Position = UDim2.new(0.0249480251, 0, 0.082810089, 0)
+		JOTAROP3.Size = UDim2.new(0, 83, 0, 27)
+		JOTAROP3.Font = Enum.Font.FredokaOne
+		JOTAROP3.Text = "Jotaro P3 V1"
+		JOTAROP3.TextColor3 = Color3.fromRGB(255, 255, 255)
+		JOTAROP3.TextScaled = true
+		JOTAROP3.TextSize = 14.000
+		JOTAROP3.TextWrapped = true
+	
+		JOTAROP3V2.Name = "JOTAROP3V2"
+		JOTAROP3V2.Parent = ScrollingFrame
+		JOTAROP3V2.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+		JOTAROP3V2.BorderSizePixel = 0
+		JOTAROP3V2.Position = UDim2.new(0.257061303, 0, 0.082810089, 0)
+		JOTAROP3V2.Size = UDim2.new(0, 83, 0, 27)
+		JOTAROP3V2.Font = Enum.Font.FredokaOne
+		JOTAROP3V2.Text = "Jotaro P3 V2"
+		JOTAROP3V2.TextColor3 = Color3.fromRGB(255, 255, 255)
+		JOTAROP3V2.TextScaled = true
+		JOTAROP3V2.TextSize = 14.000
+		JOTAROP3V2.TextWrapped = true
+	
+		JOTAROP4.Name = "JOTAROP4"
+		JOTAROP4.Parent = ScrollingFrame
+		JOTAROP4.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+		JOTAROP4.BorderSizePixel = 0
+		JOTAROP4.Position = UDim2.new(0.257061303, 0, 0.00861373171, 0)
+		JOTAROP4.Size = UDim2.new(0, 83, 0, 27)
+		JOTAROP4.Font = Enum.Font.FredokaOne
+		JOTAROP4.Text = "Jotaro P4"
+		JOTAROP4.TextColor3 = Color3.fromRGB(255, 255, 255)
+		JOTAROP4.TextScaled = true
+		JOTAROP4.TextSize = 14.000
+		JOTAROP4.TextWrapped = true
+	
+		KIRA.Name = "KIRA"
+		KIRA.Parent = ScrollingFrame
+		KIRA.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+		KIRA.BorderSizePixel = 0
+		KIRA.Position = UDim2.new(0.734763622, 0, 0.00861373171, 0)
+		KIRA.Size = UDim2.new(0, 83, 0, 27)
+		KIRA.Font = Enum.Font.FredokaOne
+		KIRA.Text = "Kira"
+		KIRA.TextColor3 = Color3.fromRGB(255, 255, 255)
+		KIRA.TextScaled = true
+		KIRA.TextSize = 14.000
+		KIRA.TextWrapped = true
+	
+		KOICHI.Name = "KOICHI"
+		KOICHI.Parent = ScrollingFrame
+		KOICHI.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+		KOICHI.BorderSizePixel = 0
+		KOICHI.Position = UDim2.new(0.734763622, 0, 0.082810089, 0)
+		KOICHI.Size = UDim2.new(0, 83, 0, 27)
+		KOICHI.Font = Enum.Font.FredokaOne
+		KOICHI.Text = "Koichi"
+		KOICHI.TextColor3 = Color3.fromRGB(255, 255, 255)
+		KOICHI.TextScaled = true
+		KOICHI.TextSize = 14.000
+		KOICHI.TextWrapped = true
+	
+		JOHNNY.Name = "JOHNNY"
+		JOHNNY.Parent = ScrollingFrame
+		JOHNNY.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+		JOHNNY.BorderSizePixel = 0
+		JOHNNY.Position = UDim2.new(0.0249480251, 0, 0.472499996, 0)
+		JOHNNY.Size = UDim2.new(0, 83, 0, 27)
+		JOHNNY.Font = Enum.Font.FredokaOne
+		JOHNNY.Text = "Johnny"
+		JOHNNY.TextColor3 = Color3.fromRGB(255, 255, 255)
+		JOHNNY.TextScaled = true
+		JOHNNY.TextSize = 14.000
+		JOHNNY.TextWrapped = true
+	
+		JONATHAN.Name = "JONATHAN"
+		JONATHAN.Parent = ScrollingFrame
+		JONATHAN.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+		JONATHAN.BorderSizePixel = 0
+		JONATHAN.Position = UDim2.new(0.257061303, 0, 0.472499996, 0)
+		JONATHAN.Size = UDim2.new(0, 83, 0, 27)
+		JONATHAN.Font = Enum.Font.FredokaOne
+		JONATHAN.Text = "Jonathan"
+		JONATHAN.TextColor3 = Color3.fromRGB(255, 255, 255)
+		JONATHAN.TextScaled = true
+		JONATHAN.TextSize = 14.000
+		JONATHAN.TextWrapped = true
+	
+		JOSEFUMI.Name = "JOSEFUMI"
+		JOSEFUMI.Parent = ScrollingFrame
+		JOSEFUMI.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+		JOSEFUMI.BorderSizePixel = 0
+		JOSEFUMI.Position = UDim2.new(0.492965132, 0, 0.472499996, 0)
+		JOSEFUMI.Size = UDim2.new(0, 83, 0, 27)
+		JOSEFUMI.Font = Enum.Font.FredokaOne
+		JOSEFUMI.Text = "Josefumi"
+		JOSEFUMI.TextColor3 = Color3.fromRGB(255, 255, 255)
+		JOSEFUMI.TextScaled = true
+		JOSEFUMI.TextSize = 14.000
+		JOSEFUMI.TextWrapped = true
+	
+		JOSUKE.Name = "JOSUKE"
+		JOSUKE.Parent = ScrollingFrame
+		JOSUKE.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+		JOSUKE.BorderSizePixel = 0
+		JOSUKE.Position = UDim2.new(0.734763622, 0, 0.472499996, 0)
+		JOSUKE.Size = UDim2.new(0, 83, 0, 27)
+		JOSUKE.Font = Enum.Font.FredokaOne
+		JOSUKE.Text = "Josuke"
+		JOSUKE.TextColor3 = Color3.fromRGB(255, 255, 255)
+		JOSUKE.TextScaled = true
+		JOSUKE.TextSize = 14.000
+		JOSUKE.TextWrapped = true
+	
+		KAKYOIN.Name = "KAKYOIN"
+		KAKYOIN.Parent = ScrollingFrame
+		KAKYOIN.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+		KAKYOIN.BorderSizePixel = 0
+		KAKYOIN.Position = UDim2.new(0.0249480251, 0, 0.554119468, 0)
+		KAKYOIN.Size = UDim2.new(0, 83, 0, 27)
+		KAKYOIN.Font = Enum.Font.FredokaOne
+		KAKYOIN.Text = "KAKYOIN"
+		KAKYOIN.TextColor3 = Color3.fromRGB(255, 255, 255)
+		KAKYOIN.TextScaled = true
+		KAKYOIN.TextSize = 14.000
+		KAKYOIN.TextWrapped = true
+	
+		KARS.Name = "KARS"
+		KARS.Parent = ScrollingFrame
+		KARS.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+		KARS.BorderSizePixel = 0
+		KARS.Position = UDim2.new(0.257061303, 0, 0.554119468, 0)
+		KARS.Size = UDim2.new(0, 83, 0, 27)
+		KARS.Font = Enum.Font.FredokaOne
+		KARS.Text = "KARS"
+		KARS.TextColor3 = Color3.fromRGB(255, 255, 255)
+		KARS.TextScaled = true
+		KARS.TextSize = 14.000
+		KARS.TextWrapped = true
+	
+		MISTA.Name = "MISTA"
+		MISTA.Parent = ScrollingFrame
+		MISTA.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+		MISTA.BorderSizePixel = 0
+		MISTA.Position = UDim2.new(0.492965132, 0, 0.554119468, 0)
+		MISTA.Size = UDim2.new(0, 83, 0, 27)
+		MISTA.Font = Enum.Font.FredokaOne
+		MISTA.Text = "Mista"
+		MISTA.TextColor3 = Color3.fromRGB(255, 255, 255)
+		MISTA.TextScaled = true
+		MISTA.TextSize = 14.000
+		MISTA.TextWrapped = true
+	
+		FULLZEPPELI.Name = "FULLZEPPELI"
+		FULLZEPPELI.Parent = ScrollingFrame
+		FULLZEPPELI.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+		FULLZEPPELI.BorderSizePixel = 0
+		FULLZEPPELI.Position = UDim2.new(0.0249480251, 0, 0.321113735, 0)
+		FULLZEPPELI.Size = UDim2.new(0, 83, 0, 27)
+		FULLZEPPELI.Font = Enum.Font.FredokaOne
+		FULLZEPPELI.Text = "Full Set Zeppeli"
+		FULLZEPPELI.TextColor3 = Color3.fromRGB(255, 255, 255)
+		FULLZEPPELI.TextScaled = true
+		FULLZEPPELI.TextSize = 14.000
+		FULLZEPPELI.TextWrapped = true
+	
+		NARANCIA.Name = "NARANCIA"
+		NARANCIA.Parent = ScrollingFrame
+		NARANCIA.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+		NARANCIA.BorderSizePixel = 0
+		NARANCIA.Position = UDim2.new(0.734763622, 0, 0.554119468, 0)
+		NARANCIA.Size = UDim2.new(0, 83, 0, 27)
+		NARANCIA.Font = Enum.Font.FredokaOne
+		NARANCIA.Text = "Narancia"
+		NARANCIA.TextColor3 = Color3.fromRGB(255, 255, 255)
+		NARANCIA.TextScaled = true
+		NARANCIA.TextSize = 14.000
+		NARANCIA.TextWrapped = true
+	
+		HERMES.Name = "HERMES"
+		HERMES.Parent = ScrollingFrame
+		HERMES.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+		HERMES.BorderSizePixel = 0
+		HERMES.Position = UDim2.new(0.492965132, 0, 0.395310104, 0)
+		HERMES.Size = UDim2.new(0, 83, 0, 27)
+		HERMES.Font = Enum.Font.FredokaOne
+		HERMES.Text = "Hermes"
+		HERMES.TextColor3 = Color3.fromRGB(255, 255, 255)
+		HERMES.TextScaled = true
+		HERMES.TextSize = 14.000
+		HERMES.TextWrapped = true
+	
+		PUCCI.Name = "PUCCI"
+		PUCCI.Parent = ScrollingFrame
+		PUCCI.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+		PUCCI.BorderSizePixel = 0
+		PUCCI.Position = UDim2.new(0.492965132, 0, 0.321113735, 0)
+		PUCCI.Size = UDim2.new(0, 83, 0, 27)
+		PUCCI.Font = Enum.Font.FredokaOne
+		PUCCI.Text = "Pucci"
+		PUCCI.TextColor3 = Color3.fromRGB(255, 255, 255)
+		PUCCI.TextScaled = true
+		PUCCI.TextSize = 14.000
+		PUCCI.TextWrapped = true
+	
+		VALENTINE.Name = "VALENTINE"
+		VALENTINE.Parent = ScrollingFrame
+		VALENTINE.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+		VALENTINE.BorderSizePixel = 0
+		VALENTINE.Position = UDim2.new(0.0249480251, 0, 0.395310104, 0)
+		VALENTINE.Size = UDim2.new(0, 83, 0, 27)
+		VALENTINE.Font = Enum.Font.FredokaOne
+		VALENTINE.Text = "Valentine"
+		VALENTINE.TextColor3 = Color3.fromRGB(255, 255, 255)
+		VALENTINE.TextScaled = true
+		VALENTINE.TextSize = 14.000
+		VALENTINE.TextWrapped = true
+	
+		GIORNO.Name = "GIORNO"
+		GIORNO.Parent = ScrollingFrame
+		GIORNO.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+		GIORNO.BorderSizePixel = 0
+		GIORNO.Position = UDim2.new(0.257061303, 0, 0.395310104, 0)
+		GIORNO.Size = UDim2.new(0, 83, 0, 27)
+		GIORNO.Font = Enum.Font.FredokaOne
+		GIORNO.Text = "Giorno"
+		GIORNO.TextColor3 = Color3.fromRGB(255, 255, 255)
+		GIORNO.TextScaled = true
+		GIORNO.TextSize = 14.000
+		GIORNO.TextWrapped = true
+	
+		DOPPIO.Name = "DOPPIO"
+		DOPPIO.Parent = ScrollingFrame
+		DOPPIO.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+		DOPPIO.BorderSizePixel = 0
+		DOPPIO.Position = UDim2.new(0.257061303, 0, 0.321113735, 0)
+		DOPPIO.Size = UDim2.new(0, 83, 0, 27)
+		DOPPIO.Font = Enum.Font.FredokaOne
+		DOPPIO.Text = "Doppio"
+		DOPPIO.TextColor3 = Color3.fromRGB(255, 255, 255)
+		DOPPIO.TextScaled = true
+		DOPPIO.TextSize = 14.000
+		DOPPIO.TextWrapped = true
+	
+		FUGO.Name = "FUGO"
+		FUGO.Parent = ScrollingFrame
+		FUGO.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+		FUGO.BorderSizePixel = 0
+		FUGO.Position = UDim2.new(0.734763622, 0, 0.321113735, 0)
+		FUGO.Size = UDim2.new(0, 83, 0, 27)
+		FUGO.Font = Enum.Font.FredokaOne
+		FUGO.Text = "Fugo"
+		FUGO.TextColor3 = Color3.fromRGB(255, 255, 255)
+		FUGO.TextScaled = true
+		FUGO.TextSize = 14.000
+		FUGO.TextWrapped = true
+	
+		POLNAREFF.Name = "POLNAREFF"
+		POLNAREFF.Parent = ScrollingFrame
+		POLNAREFF.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+		POLNAREFF.BorderSizePixel = 0
+		POLNAREFF.Position = UDim2.new(0.734763622, 0, 0.395310104, 0)
+		POLNAREFF.Size = UDim2.new(0, 83, 0, 27)
+		POLNAREFF.Font = Enum.Font.FredokaOne
+		POLNAREFF.Text = "Polnareff"
+		POLNAREFF.TextColor3 = Color3.fromRGB(255, 255, 255)
+		POLNAREFF.TextScaled = true
+		POLNAREFF.TextSize = 14.000
+		POLNAREFF.TextWrapped = true
+	
+		SHINYANASUI.Name = "SHINYANASUI"
+		SHINYANASUI.Parent = ScrollingFrame
+		SHINYANASUI.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+		SHINYANASUI.BorderSizePixel = 0
+		SHINYANASUI.Position = UDim2.new(0.734763622, 0, 0.71453613, 0)
+		SHINYANASUI.Size = UDim2.new(0, 83, 0, 27)
+		SHINYANASUI.Font = Enum.Font.FredokaOne
+		SHINYANASUI.Text = "Shiny Anasui"
+		SHINYANASUI.TextColor3 = Color3.fromRGB(255, 255, 255)
+		SHINYANASUI.TextScaled = true
+		SHINYANASUI.TextSize = 14.000
+		SHINYANASUI.TextWrapped = true
+	
+		SHINYABBACCHIO.Name = "SHINYABBACCHIO"
+		SHINYABBACCHIO.Parent = ScrollingFrame
+		SHINYABBACCHIO.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+		SHINYABBACCHIO.BorderSizePixel = 0
+		SHINYABBACCHIO.Position = UDim2.new(0.492965102, 0, 0.71453613, 0)
+		SHINYABBACCHIO.Size = UDim2.new(0, 83, 0, 27)
+		SHINYABBACCHIO.Font = Enum.Font.FredokaOne
+		SHINYABBACCHIO.Text = "Shiny Abbacchio"
+		SHINYABBACCHIO.TextColor3 = Color3.fromRGB(255, 255, 255)
+		SHINYABBACCHIO.TextScaled = true
+		SHINYABBACCHIO.TextSize = 14.000
+		SHINYABBACCHIO.TextWrapped = true
+	
+		ZEPPELI.Name = "ZEPPELI"
+		ZEPPELI.Parent = ScrollingFrame
+		ZEPPELI.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+		ZEPPELI.BorderSizePixel = 0
+		ZEPPELI.Position = UDim2.new(0.257061303, 0, 0.71453613, 0)
+		ZEPPELI.Size = UDim2.new(0, 83, 0, 27)
+		ZEPPELI.Font = Enum.Font.FredokaOne
+		ZEPPELI.Text = "Zeppeli"
+		ZEPPELI.TextColor3 = Color3.fromRGB(255, 255, 255)
+		ZEPPELI.TextScaled = true
+		ZEPPELI.TextSize = 14.000
+		ZEPPELI.TextWrapped = true
+	
+		JOSEPHP2.Name = "JOSEPHP2"
+		JOSEPHP2.Parent = ScrollingFrame
+		JOSEPHP2.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+		JOSEPHP2.BorderSizePixel = 0
+		JOSEPHP2.Position = UDim2.new(0.024948027, 0, 0.71453613, 0)
+		JOSEPHP2.Size = UDim2.new(0, 83, 0, 27)
+		JOSEPHP2.Font = Enum.Font.FredokaOne
+		JOSEPHP2.Text = "Joseph P2"
+		JOSEPHP2.TextColor3 = Color3.fromRGB(255, 255, 255)
+		JOSEPHP2.TextScaled = true
+		JOSEPHP2.TextSize = 14.000
+		JOSEPHP2.TextWrapped = true
+	
+		TRISH.Name = "TRISH"
+		TRISH.Parent = ScrollingFrame
+		TRISH.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+		TRISH.BorderSizePixel = 0
+		TRISH.Position = UDim2.new(0.734763622, 0, 0.632916629, 0)
+		TRISH.Size = UDim2.new(0, 83, 0, 27)
+		TRISH.Font = Enum.Font.FredokaOne
+		TRISH.Text = "Trish"
+		TRISH.TextColor3 = Color3.fromRGB(255, 255, 255)
+		TRISH.TextScaled = true
+		TRISH.TextSize = 14.000
+		TRISH.TextWrapped = true
+	
+		ROHAN.Name = "ROHAN"
+		ROHAN.Parent = ScrollingFrame
+		ROHAN.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+		ROHAN.BorderSizePixel = 0
+		ROHAN.Position = UDim2.new(0.492965102, 0, 0.632916629, 0)
+		ROHAN.Size = UDim2.new(0, 83, 0, 27)
+		ROHAN.Font = Enum.Font.FredokaOne
+		ROHAN.Text = "Rohan"
+		ROHAN.TextColor3 = Color3.fromRGB(255, 255, 255)
+		ROHAN.TextScaled = true
+		ROHAN.TextSize = 14.000
+		ROHAN.TextWrapped = true
+	
+		RISOTTO.Name = "RISOTTO"
+		RISOTTO.Parent = ScrollingFrame
+		RISOTTO.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+		RISOTTO.BorderSizePixel = 0
+		RISOTTO.Position = UDim2.new(0.257061303, 0, 0.632916629, 0)
+		RISOTTO.Size = UDim2.new(0, 83, 0, 27)
+		RISOTTO.Font = Enum.Font.FredokaOne
+		RISOTTO.Text = "Risotto"
+		RISOTTO.TextColor3 = Color3.fromRGB(255, 255, 255)
+		RISOTTO.TextScaled = true
+		RISOTTO.TextSize = 14.000
+		RISOTTO.TextWrapped = true
+	
+		JOSEPHP3.Name = "JOSEPHP3"
+		JOSEPHP3.Parent = ScrollingFrame
+		JOSEPHP3.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+		JOSEPHP3.BorderSizePixel = 0
+		JOSEPHP3.Position = UDim2.new(0.024948027, 0, 0.632916629, 0)
+		JOSEPHP3.Size = UDim2.new(0, 83, 0, 27)
+		JOSEPHP3.Font = Enum.Font.FredokaOne
+		JOSEPHP3.Text = "Joseph P3"
+		JOSEPHP3.TextColor3 = Color3.fromRGB(255, 255, 255)
+		JOSEPHP3.TextScaled = true
+		JOSEPHP3.TextSize = 14.000
+		JOSEPHP3.TextWrapped = true
+	
+		SHINYDOPPIO.Name = "SHINYDOPPIO"
+		SHINYDOPPIO.Parent = ScrollingFrame
+		SHINYDOPPIO.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+		SHINYDOPPIO.BorderSizePixel = 0
+		SHINYDOPPIO.Position = UDim2.new(0.492965102, 0, 0.793702781, 0)
+		SHINYDOPPIO.Size = UDim2.new(0, 83, 0, 27)
+		SHINYDOPPIO.Font = Enum.Font.FredokaOne
+		SHINYDOPPIO.Text = "Shiny Doppio"
+		SHINYDOPPIO.TextColor3 = Color3.fromRGB(255, 255, 255)
+		SHINYDOPPIO.TextScaled = true
+		SHINYDOPPIO.TextSize = 14.000
+		SHINYDOPPIO.TextWrapped = true
+	
+		SHINYMISTA.Name = "SHINYMISTA"
+		SHINYMISTA.Parent = ScrollingFrame
+		SHINYMISTA.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+		SHINYMISTA.BorderSizePixel = 0
+		SHINYMISTA.Position = UDim2.new(0.024948027, 0, 0.949258387, 0)
+		SHINYMISTA.Size = UDim2.new(0, 83, 0, 27)
+		SHINYMISTA.Font = Enum.Font.FredokaOne
+		SHINYMISTA.Text = "Shiny Mista"
+		SHINYMISTA.TextColor3 = Color3.fromRGB(255, 255, 255)
+		SHINYMISTA.TextScaled = true
+		SHINYMISTA.TextSize = 14.000
+		SHINYMISTA.TextWrapped = true
+	
+		SHINYDIO.Name = "SHINYDIO"
+		SHINYDIO.Parent = ScrollingFrame
+		SHINYDIO.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+		SHINYDIO.BorderSizePixel = 0
+		SHINYDIO.Position = UDim2.new(0.257061303, 0, 0.793702781, 0)
+		SHINYDIO.Size = UDim2.new(0, 83, 0, 27)
+		SHINYDIO.Font = Enum.Font.FredokaOne
+		SHINYDIO.Text = "Shiny DIO P3"
+		SHINYDIO.TextColor3 = Color3.fromRGB(255, 255, 255)
+		SHINYDIO.TextScaled = true
+		SHINYDIO.TextSize = 14.000
+		SHINYDIO.TextWrapped = true
+	
+		SHINYDIEGO.Name = "SHINYDIEGO"
+		SHINYDIEGO.Parent = ScrollingFrame
+		SHINYDIEGO.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+		SHINYDIEGO.BorderSizePixel = 0
+		SHINYDIEGO.Position = UDim2.new(0.024948027, 0, 0.793702781, 0)
+		SHINYDIEGO.Size = UDim2.new(0, 83, 0, 27)
+		SHINYDIEGO.Font = Enum.Font.FredokaOne
+		SHINYDIEGO.Text = "Shiny Diego"
+		SHINYDIEGO.TextColor3 = Color3.fromRGB(255, 255, 255)
+		SHINYDIEGO.TextScaled = true
+		SHINYDIEGO.TextSize = 14.000
+		SHINYDIEGO.TextWrapped = true
+	
+		SHINYKOICHI.Name = "SHINYKOICHI"
+		SHINYKOICHI.Parent = ScrollingFrame
+		SHINYKOICHI.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+		SHINYKOICHI.BorderSizePixel = 0
+		SHINYKOICHI.Position = UDim2.new(0.734763622, 0, 0.874952793, 0)
+		SHINYKOICHI.Size = UDim2.new(0, 83, 0, 27)
+		SHINYKOICHI.Font = Enum.Font.FredokaOne
+		SHINYKOICHI.Text = "Shiny Koichi"
+		SHINYKOICHI.TextColor3 = Color3.fromRGB(255, 255, 255)
+		SHINYKOICHI.TextScaled = true
+		SHINYKOICHI.TextSize = 14.000
+		SHINYKOICHI.TextWrapped = true
+	
+		SHINYKAKYOIN.Name = "SHINYKAKYOIN"
+		SHINYKAKYOIN.Parent = ScrollingFrame
+		SHINYKAKYOIN.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+		SHINYKAKYOIN.BorderSizePixel = 0
+		SHINYKAKYOIN.Position = UDim2.new(0.492965102, 0, 0.874952793, 0)
+		SHINYKAKYOIN.Size = UDim2.new(0, 83, 0, 27)
+		SHINYKAKYOIN.Font = Enum.Font.FredokaOne
+		SHINYKAKYOIN.Text = "Shiny Kakyoin"
+		SHINYKAKYOIN.TextColor3 = Color3.fromRGB(255, 255, 255)
+		SHINYKAKYOIN.TextScaled = true
+		SHINYKAKYOIN.TextSize = 14.000
+		SHINYKAKYOIN.TextWrapped = true
+	
+		SHINYJOHNNY.Name = "SHINYJOHNNY"
+		SHINYJOHNNY.Parent = ScrollingFrame
+		SHINYJOHNNY.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+		SHINYJOHNNY.BorderSizePixel = 0
+		SHINYJOHNNY.Position = UDim2.new(0.257061303, 0, 0.874952793, 0)
+		SHINYJOHNNY.Size = UDim2.new(0, 83, 0, 27)
+		SHINYJOHNNY.Font = Enum.Font.FredokaOne
+		SHINYJOHNNY.Text = "Shiny Johnny"
+		SHINYJOHNNY.TextColor3 = Color3.fromRGB(255, 255, 255)
+		SHINYJOHNNY.TextScaled = true
+		SHINYJOHNNY.TextSize = 14.000
+		SHINYJOHNNY.TextWrapped = true
+	
+		SHINYPOLNAREFF.Name = "SHINYPOLNAREFF"
+		SHINYPOLNAREFF.Parent = ScrollingFrame
+		SHINYPOLNAREFF.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+		SHINYPOLNAREFF.BorderSizePixel = 0
+		SHINYPOLNAREFF.Position = UDim2.new(0.024948027, 0, 0.874952793, 0)
+		SHINYPOLNAREFF.Size = UDim2.new(0, 83, 0, 27)
+		SHINYPOLNAREFF.Font = Enum.Font.FredokaOne
+		SHINYPOLNAREFF.Text = "Shiny Polnareff"
+		SHINYPOLNAREFF.TextColor3 = Color3.fromRGB(255, 255, 255)
+		SHINYPOLNAREFF.TextScaled = true
+		SHINYPOLNAREFF.TextSize = 14.000
+		SHINYPOLNAREFF.TextWrapped = true
+	
+		STONEMASK.Name = "STONEMASK"
+		STONEMASK.Parent = ScrollingFrame
+		STONEMASK.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+		STONEMASK.BorderSizePixel = 0
+		STONEMASK.Position = UDim2.new(0.734763622, 0, 0.949258387, 0)
+		STONEMASK.Size = UDim2.new(0, 83, 0, 27)
+		STONEMASK.Font = Enum.Font.FredokaOne
+		STONEMASK.Text = "Stone Mask"
+		STONEMASK.TextColor3 = Color3.fromRGB(255, 255, 255)
+		STONEMASK.TextScaled = true
+		STONEMASK.TextSize = 14.000
+		STONEMASK.TextWrapped = true
+	
+		SHINYJOSEPHP2.Name = "SHINYJOSEPHP2"
+		SHINYJOSEPHP2.Parent = ScrollingFrame
+		SHINYJOSEPHP2.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+		SHINYJOSEPHP2.BorderSizePixel = 0
+		SHINYJOSEPHP2.Position = UDim2.new(0.492965102, 0, 0.949258387, 0)
+		SHINYJOSEPHP2.Size = UDim2.new(0, 83, 0, 27)
+		SHINYJOSEPHP2.Font = Enum.Font.FredokaOne
+		SHINYJOSEPHP2.Text = "Shiny Joseph P2"
+		SHINYJOSEPHP2.TextColor3 = Color3.fromRGB(255, 255, 255)
+		SHINYJOSEPHP2.TextScaled = true
+		SHINYJOSEPHP2.TextSize = 14.000
+		SHINYJOSEPHP2.TextWrapped = true
+	
+		SHINYTRISH.Name = "SHINYTRISH"
+		SHINYTRISH.Parent = ScrollingFrame
+		SHINYTRISH.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+		SHINYTRISH.BorderSizePixel = 0
+		SHINYTRISH.Position = UDim2.new(0.257061303, 0, 0.949258387, 0)
+		SHINYTRISH.Size = UDim2.new(0, 83, 0, 27)
+		SHINYTRISH.Font = Enum.Font.FredokaOne
+		SHINYTRISH.Text = "Shiny Trish"
+		SHINYTRISH.TextColor3 = Color3.fromRGB(255, 255, 255)
+		SHINYTRISH.TextScaled = true
+		SHINYTRISH.TextSize = 14.000
+		SHINYTRISH.TextWrapped = true
+	
+		SHINYGYRO.Name = "SHINYGYRO"
+		SHINYGYRO.Parent = ScrollingFrame
+		SHINYGYRO.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+		SHINYGYRO.BorderSizePixel = 0
+		SHINYGYRO.Position = UDim2.new(0.734763622, 0, 0.793702781, 0)
+		SHINYGYRO.Size = UDim2.new(0, 83, 0, 27)
+		SHINYGYRO.Font = Enum.Font.FredokaOne
+		SHINYGYRO.Text = "Shiny Gyro"
+		SHINYGYRO.TextColor3 = Color3.fromRGB(255, 255, 255)
+		SHINYGYRO.TextScaled = true
+		SHINYGYRO.TextSize = 14.000
+		SHINYGYRO.TextWrapped = true
+	
+		x.Name = "x"
+		x.Parent = Frame
+		x.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		x.BackgroundTransparency = 1.000
+		x.Position = UDim2.new(0.946210265, 0, 0, 0)
+		x.Size = UDim2.new(0, 25, 0, 25)
+		x.Font = Enum.Font.SourceSans
+		x.Text = "X"
+		x.TextColor3 = Color3.fromRGB(255, 0, 0)
+		x.TextSize = 14.000
+	
+		TextLabel.Parent = Frame
+		TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		TextLabel.BackgroundTransparency = 1.000
+		TextLabel.Position = UDim2.new(0.00487804879, 0, 0, 0)
+		TextLabel.Size = UDim2.new(0, 360, 0, 24)
+		TextLabel.Font = Enum.Font.RobotoMono
+		TextLabel.Text = "YBA Cosmetics by Wither Report"
+		TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+		TextLabel.TextScaled = true
+		TextLabel.TextSize = 14.000
+		TextLabel.TextWrapped = true
+	
+		minus.Name = "minus"
+		minus.Parent = Frame
+		minus.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		minus.BackgroundTransparency = 1.000
+		minus.Position = UDim2.new(0.885234654, 0, -0.00416666688, 0)
+		minus.Size = UDim2.new(0, 25, 0, 25)
+		minus.Font = Enum.Font.SourceSans
+		minus.Text = "-"
+		minus.TextColor3 = Color3.fromRGB(255, 255, 255)
+		minus.TextSize = 14.000
+	
+		Frame_2.Parent = Frame
+		Frame_2.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+		Frame_2.BorderSizePixel = 0
+		Frame_2.Position = UDim2.new(0.00487804879, 0, 0, 0)
+		Frame_2.Size = UDim2.new(0, 408, 0, 25)
+		Frame_2.ZIndex = 0
+	
+		-- Scripts:
+	
+		local function ZGTRN_fake_script() -- COS.LocalScript 
+			local script = Instance.new('LocalScript', COS)
+	
+			script.Parent.Frame.x.MouseButton1Click:Connect(function()
+				script.Parent:Destroy()
+			end)
+			local e = true
+			script.Parent.Frame.Draggable = true
+			script.Parent.Frame.minus.MouseButton1Click:Connect(function()
+				if e == true then
+					script.Parent.Frame.minus.Text = "+"
+					script.Parent.Frame.ScrollingFrame:TweenSize(UDim2.new(0, 408, 0, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Sine, .5, true)
+					--script.Parent.Frame.ScrollingFrame.Visible = false
+					e = false
+				else
+					--script.Parent.Frame.ScrollingFrame.Visible = true
+					script.Parent.Frame.ScrollingFrame:TweenSize(UDim2.new(0, 408, 0, 266), Enum.EasingDirection.Out, Enum.EasingStyle.Sine, .5, true)
+					script.Parent.Frame.minus.Text = "-"
+					e = true
+				end
+			end)
+	
+			script.Parent.Frame.ScrollingFrame.DIOP1.MouseButton1Click:Connect(function()
+				local Player = game.Players.LocalPlayer
+				local Character = Player.Character or Player.CharacterAdded:wait()
+	
+				local ohString1 = "EquipCosmetic"
+				local CosmeticName = "Deo's Hair v2"
+	
+				Character.RemoteEvent:FireServer(ohString1, CosmeticName)
+			end)
+	
+			script.Parent.Frame.ScrollingFrame.JOTAROP4.MouseButton1Click:Connect(function()
+				local Player = game.Players.LocalPlayer
+				local Character = Player.Character or Player.CharacterAdded:wait()
+	
+				local ohString1 = "EquipCosmetic"
+				local CosmeticName = "Joe v2"
+	
+				Character.RemoteEvent:FireServer(ohString1, CosmeticName)
+			end)
+	
+			script.Parent.Frame.ScrollingFrame.JOLYNE.MouseButton1Click:Connect(function()
+				local Player = game.Players.LocalPlayer
+				local Character = Player.Character or Player.CharacterAdded:wait()
+	
+				local ohString1 = "EquipCosmetic"
+				local CosmeticName = "Joline Kujo's Hair"
+	
+				Character.RemoteEvent:FireServer(ohString1, CosmeticName)
+			end)
+	
+			script.Parent.Frame.ScrollingFrame.KIRA.MouseButton1Click:Connect(function()
+				local Player = game.Players.LocalPlayer
+				local Character = Player.Character or Player.CharacterAdded:wait()
+	
+				local ohString1 = "EquipCosmetic"
+				local CosmeticName = "Killer Kage's Hair"
+	
+				Character.RemoteEvent:FireServer(ohString1, CosmeticName)
+			end)
+	
+			script.Parent.Frame.ScrollingFrame.JOTAROP3.MouseButton1Click:Connect(function()
+				local Player = game.Players.LocalPlayer
+				local Character = Player.Character or Player.CharacterAdded:wait()
+	
+				local ohString1 = "EquipCosmetic"
+				local CosmeticName = "Joe v1"
+	
+				Character.RemoteEvent:FireServer(ohString1, CosmeticName)
+			end)
+	
+			script.Parent.Frame.ScrollingFrame.JOTAROP3V2.MouseButton1Click:Connect(function()
+				local Player = game.Players.LocalPlayer
+				local Character = Player.Character or Player.CharacterAdded:wait()
+	
+				local ohString1 = "EquipCosmetic"
+				local CosmeticName = "Joe v4"
+	
+				Character.RemoteEvent:FireServer(ohString1, CosmeticName)
+			end)
+	
+			script.Parent.Frame.ScrollingFrame.GYRO.MouseButton1Click:Connect(function()
+				local Player = game.Players.LocalPlayer
+				local Character = Player.Character or Player.CharacterAdded:wait()
+	
+				local ohString1 = "EquipCosmetic"
+				local CosmeticName = "Guy Zeppelin's Hat"
+	
+				Character.RemoteEvent:FireServer(ohString1, CosmeticName)
+			end)
+	
+			script.Parent.Frame.ScrollingFrame.ABBACCHIO.MouseButton1Click:Connect(function()
+				local Player = game.Players.LocalPlayer
+				local Character = Player.Character or Player.CharacterAdded:wait()
+	
+				local ohString1 = "EquipCosmetic"
+				local CosmeticName = "Lion's Hair"
+	
+				Character.RemoteEvent:FireServer(ohString1, CosmeticName)
+			end)
+	
+			script.Parent.Frame.ScrollingFrame.KOICHI.MouseButton1Click:Connect(function()
+				local Player = game.Players.LocalPlayer
+				local Character = Player.Character or Player.CharacterAdded:wait()
+	
+				local ohString1 = "EquipCosmetic"
+				local CosmeticName = "Koechee's Hair"
+	
+				Character.RemoteEvent:FireServer(ohString1, CosmeticName)
+			end)
+	
+			script.Parent.Frame.ScrollingFrame.DIOOH.MouseButton1Click:Connect(function()
+				local Player = game.Players.LocalPlayer
+				local Character = Player.Character or Player.CharacterAdded:wait()
+	
+				local ohString1 = "EquipCosmetic"
+				local CosmeticName = "Heaven Ascension DEO's Hair"
+	
+				Character.RemoteEvent:FireServer(ohString1, CosmeticName)
+			end)
+	
+			script.Parent.Frame.ScrollingFrame.AVDOL.MouseButton1Click:Connect(function()
+				local Player = game.Players.LocalPlayer
+				local Character = Player.Character or Player.CharacterAdded:wait()
+	
+				local ohString1 = "EquipCosmetic"
+				local CosmeticName = "Ahdol's Hat"
+	
+				Character.RemoteEvent:FireServer(ohString1, CosmeticName)
+			end)
+	
+			script.Parent.Frame.ScrollingFrame.DIAVOLO.MouseButton1Click:Connect(function()
+				local Player = game.Players.LocalPlayer
+				local Character = Player.Character or Player.CharacterAdded:wait()
+	
+				local ohString1 = "EquipCosmetic"
+				local CosmeticName = "Deovolo's Hair"
+	
+				Character.RemoteEvent:FireServer(ohString1, CosmeticName)
+			end)
+	
+			script.Parent.Frame.ScrollingFrame.DIEGO.MouseButton1Click:Connect(function()
+				local Player = game.Players.LocalPlayer
+				local Character = Player.Character or Player.CharacterAdded:wait()
+	
+				local ohString1 = "EquipCosmetic"
+				local CosmeticName = "Deo Alternate Universe's Hat"
+	
+				Character.RemoteEvent:FireServer(ohString1, CosmeticName)
+			end)
+	
+			script.Parent.Frame.ScrollingFrame.ANASUI.MouseButton1Click:Connect(function()
+				local Player = game.Players.LocalPlayer
+				local Character = Player.Character or Player.CharacterAdded:wait()
+	
+				local ohString1 = "EquipCosmetic"
+				local CosmeticName = "Annasuey's Hair"
+	
+				Character.RemoteEvent:FireServer(ohString1, CosmeticName)
+			end)
+	
+			script.Parent.Frame.ScrollingFrame.BUCCIARATI.MouseButton1Click:Connect(function()
+				local Player = game.Players.LocalPlayer
+				local Character = Player.Character or Player.CharacterAdded:wait()
+	
+				local ohString1 = "EquipCosmetic"
+				local CosmeticName = "Bruce's Hair"
+	
+				Character.RemoteEvent:FireServer(ohString1, CosmeticName)
+			end)
+	
+			script.Parent.Frame.ScrollingFrame.DIOP3.MouseButton1Click:Connect(function()
+				local Player = game.Players.LocalPlayer
+				local Character = Player.Character or Player.CharacterAdded:wait()
+	
+				local ohString1 = "EquipCosmetic"
+				local CosmeticName = "Deo's Hair v1"
+	
+				Character.RemoteEvent:FireServer(ohString1, CosmeticName)
+			end)
+	
+			script.Parent.Frame.ScrollingFrame.FULLZEPPELI.MouseButton1Click:Connect(function()
+				local Player = game.Players.LocalPlayer
+				local Character = Player.Character or Player.CharacterAdded:wait()
+	
+				local ohString1 = "EquipCosmetic"
+				local CosmeticName = "Zeppelin Full Set"
+	
+				Character.RemoteEvent:FireServer(ohString1, CosmeticName)
+			end)
+	
+			script.Parent.Frame.ScrollingFrame.DOPPIO.MouseButton1Click:Connect(function()
+				local Player = game.Players.LocalPlayer
+				local Character = Player.Character or Player.CharacterAdded:wait()
+	
+				local ohString1 = "EquipCosmetic"
+				local CosmeticName = "Dopey's Hair"
+	
+				Character.RemoteEvent:FireServer(ohString1, CosmeticName)
+			end)
+	
+			script.Parent.Frame.ScrollingFrame.PUCCI.MouseButton1Click:Connect(function()
+				local Player = game.Players.LocalPlayer
+				local Character = Player.Character or Player.CharacterAdded:wait()
+	
+				local ohString1 = "EquipCosmetic"
+				local CosmeticName = "Rico Pushie's Hair"
+	
+				Character.RemoteEvent:FireServer(ohString1, CosmeticName)
+			end)
+	
+			script.Parent.Frame.ScrollingFrame.FUGO.MouseButton1Click:Connect(function()
+				local Player = game.Players.LocalPlayer
+				local Character = Player.Character or Player.CharacterAdded:wait()
+	
+				local ohString1 = "EquipCosmetic"
+				local CosmeticName = "Fog's Hair"
+	
+				Character.RemoteEvent:FireServer(ohString1, CosmeticName)
+			end)
+	
+			script.Parent.Frame.ScrollingFrame.VALENTINE.MouseButton1Click:Connect(function()
+				local Player = game.Players.LocalPlayer
+				local Character = Player.Character or Player.CharacterAdded:wait()
+	
+				local ohString1 = "EquipCosmetic"
+				local CosmeticName = "Hillarious Heart's Hair"
+	
+				Character.RemoteEvent:FireServer(ohString1, CosmeticName)
+			end)
+	
+			script.Parent.Frame.ScrollingFrame.GIORNO.MouseButton1Click:Connect(function()
+				local Player = game.Players.LocalPlayer
+				local Character = Player.Character or Player.CharacterAdded:wait()
+	
+				local ohString1 = "EquipCosmetic"
+				local CosmeticName = "Boungiorno Brovanna's Hair"
+	
+				Character.RemoteEvent:FireServer(ohString1, CosmeticName)
+			end)
+	
+			script.Parent.Frame.ScrollingFrame.HERMES.MouseButton1Click:Connect(function()
+				local Player = game.Players.LocalPlayer
+				local Character = Player.Character or Player.CharacterAdded:wait()
+	
+				local ohString1 = "EquipCosmetic"
+				local CosmeticName = "Hermes' Hair"
+	
+				Character.RemoteEvent:FireServer(ohString1, CosmeticName)
+			end)
+	
+			script.Parent.Frame.ScrollingFrame.POLNAREFF.MouseButton1Click:Connect(function()
+				local Player = game.Players.LocalPlayer
+				local Character = Player.Character or Player.CharacterAdded:wait()
+	
+				local ohString1 = "EquipCosmetic"
+				local CosmeticName = "Turtle Guy's Hair"
+	
+				Character.RemoteEvent:FireServer(ohString1, CosmeticName)
+			end)
+	
+			script.Parent.Frame.ScrollingFrame.JOHNNY.MouseButton1Click:Connect(function()
+				local Player = game.Players.LocalPlayer
+				local Character = Player.Character or Player.CharacterAdded:wait()
+	
+				local ohString1 = "EquipCosmetic"
+				local CosmeticName = "John Joemama's Hat"
+	
+				Character.RemoteEvent:FireServer(ohString1, CosmeticName)
+			end)
+	
+			script.Parent.Frame.ScrollingFrame.JONATHAN.MouseButton1Click:Connect(function()
+				local Player = game.Players.LocalPlayer
+				local Character = Player.Character or Player.CharacterAdded:wait()
+	
+				local ohString1 = "EquipCosmetic"
+				local CosmeticName = "Jonathan Joemama's Hair"
+	
+				Character.RemoteEvent:FireServer(ohString1, CosmeticName)
+			end)
+	
+			script.Parent.Frame.ScrollingFrame.JOSEFUMI.MouseButton1Click:Connect(function()
+				local Player = game.Players.LocalPlayer
+				local Character = Player.Character or Player.CharacterAdded:wait()
+	
+				local ohString1 = "EquipCosmetic"
+				local CosmeticName = "Jose Cujo's Hat"
+	
+				Character.RemoteEvent:FireServer(ohString1, CosmeticName)
+			end)
+	
+			script.Parent.Frame.ScrollingFrame.JOSUKE.MouseButton1Click:Connect(function()
+				local Player = game.Players.LocalPlayer
+				local Character = Player.Character or Player.CharacterAdded:wait()
+	
+				local ohString1 = "EquipCosmetic"
+				local CosmeticName = "Joeske's Hair"
+	
+				Character.RemoteEvent:FireServer(ohString1, CosmeticName)
+			end)
+	
+			script.Parent.Frame.ScrollingFrame.KAKYOIN.MouseButton1Click:Connect(function()
+				local Player = game.Players.LocalPlayer
+				local Character = Player.Character or Player.CharacterAdded:wait()
+	
+				local ohString1 = "EquipCosmetic"
+				local CosmeticName = "Cocoyoin's Hair"
+	
+				Character.RemoteEvent:FireServer(ohString1, CosmeticName)
+			end)
+	
+			script.Parent.Frame.ScrollingFrame.KARS.MouseButton1Click:Connect(function()
+				local Player = game.Players.LocalPlayer
+				local Character = Player.Character or Player.CharacterAdded:wait()
+	
+				local ohString1 = "EquipCosmetic"
+				local CosmeticName = "Car's Hair"
+	
+				Character.RemoteEvent:FireServer(ohString1, CosmeticName)
+			end)
+	
+			script.Parent.Frame.ScrollingFrame.MISTA.MouseButton1Click:Connect(function()
+				local Player = game.Players.LocalPlayer
+				local Character = Player.Character or Player.CharacterAdded:wait()
+	
+				local ohString1 = "EquipCosmetic"
+				local CosmeticName = "Mister's Hat"
+	
+				Character.RemoteEvent:FireServer(ohString1, CosmeticName)
+			end)
+	
+			script.Parent.Frame.ScrollingFrame.NARANCIA.MouseButton1Click:Connect(function()
+				local Player = game.Players.LocalPlayer
+				local Character = Player.Character or Player.CharacterAdded:wait()
+	
+				local ohString1 = "EquipCosmetic"
+				local CosmeticName = "Naranya's Hair"
+	
+				Character.RemoteEvent:FireServer(ohString1, CosmeticName)
+			end)
+	
+			script.Parent.Frame.ScrollingFrame.JOSEPHP3.MouseButton1Click:Connect(function()
+				local Player = game.Players.LocalPlayer
+				local Character = Player.Character or Player.CharacterAdded:wait()
+	
+				local ohString1 = "EquipCosmetic"
+				local CosmeticName = "Joseph Joemama's Hair v2"
+	
+				Character.RemoteEvent:FireServer(ohString1, CosmeticName)
+			end)
+	
+			script.Parent.Frame.ScrollingFrame.RISOTTO.MouseButton1Click:Connect(function()
+				local Player = game.Players.LocalPlayer
+				local Character = Player.Character or Player.CharacterAdded:wait()
+	
+				local ohString1 = "EquipCosmetic"
+				local CosmeticName = "Rissato's Hair"
+	
+				Character.RemoteEvent:FireServer(ohString1, CosmeticName)
+			end)
+	
+			script.Parent.Frame.ScrollingFrame.ROHAN.MouseButton1Click:Connect(function()
+				local Player = game.Players.LocalPlayer
+				local Character = Player.Character or Player.CharacterAdded:wait()
+	
+				local ohString1 = "EquipCosmetic"
+				local CosmeticName = "Kishite Ramen's Hair"
+	
+				Character.RemoteEvent:FireServer(ohString1, CosmeticName)
+			end)
+	
+			script.Parent.Frame.ScrollingFrame.TRISH.MouseButton1Click:Connect(function()
+				local Player = game.Players.LocalPlayer
+				local Character = Player.Character or Player.CharacterAdded:wait()
+	
+				local ohString1 = "EquipCosmetic"
+				local CosmeticName = "Trisha Uno's Hair"
+	
+				Character.RemoteEvent:FireServer(ohString1, CosmeticName)
+			end)
+	
+			script.Parent.Frame.ScrollingFrame.JOSEPHP2.MouseButton1Click:Connect(function()
+				local Player = game.Players.LocalPlayer
+				local Character = Player.Character or Player.CharacterAdded:wait()
+	
+				local ohString1 = "EquipCosmetic"
+				local CosmeticName = "Joseph Joemama's Hair v1"
+	
+				Character.RemoteEvent:FireServer(ohString1, CosmeticName)
+			end)
+	
+			script.Parent.Frame.ScrollingFrame.ZEPPELI.MouseButton1Click:Connect(function()
+				local Player = game.Players.LocalPlayer
+				local Character = Player.Character or Player.CharacterAdded:wait()
+	
+				local ohString1 = "EquipCosmetic"
+				local CosmeticName = "Zeppelin's Hat"
+	
+				Character.RemoteEvent:FireServer(ohString1, CosmeticName)
+			end)
+	
+			script.Parent.Frame.ScrollingFrame.SHINYABBACCHIO.MouseButton1Click:Connect(function()
+				local Player = game.Players.LocalPlayer
+				local Character = Player.Character or Player.CharacterAdded:wait()
+	
+				local ohString1 = "EquipCosmetic"
+				local CosmeticName = "Shiny Abbacho's Hair"
+	
+				Character.RemoteEvent:FireServer(ohString1, CosmeticName)
+			end)
+	
+			script.Parent.Frame.ScrollingFrame.SHINYANASUI.MouseButton1Click:Connect(function()
+				local Player = game.Players.LocalPlayer
+				local Character = Player.Character or Player.CharacterAdded:wait()
+	
+				local ohString1 = "EquipCosmetic"
+				local CosmeticName = "Shiny Annasuey's Hair"
+	
+				Character.RemoteEvent:FireServer(ohString1, CosmeticName)
+			end)
+	
+			script.Parent.Frame.ScrollingFrame.SHINYDIEGO.MouseButton1Click:Connect(function()
+				local Player = game.Players.LocalPlayer
+				local Character = Player.Character or Player.CharacterAdded:wait()
+	
+				local ohString1 = "EquipCosmetic"
+				local CosmeticName = "Shiney Deo Alternate Universe's Hat"
+	
+				Character.RemoteEvent:FireServer(ohString1, CosmeticName)
+			end)
+	
+			script.Parent.Frame.ScrollingFrame.SHINYDIO.MouseButton1Click:Connect(function()
+				local Player = game.Players.LocalPlayer
+				local Character = Player.Character or Player.CharacterAdded:wait()
+	
+				local ohString1 = "EquipCosmetic"
+				local CosmeticName = "Shiny Deo's Hair"
+	
+				Character.RemoteEvent:FireServer(ohString1, CosmeticName)
+			end)
+	
+			script.Parent.Frame.ScrollingFrame.SHINYDOPPIO.MouseButton1Click:Connect(function()
+				local Player = game.Players.LocalPlayer
+				local Character = Player.Character or Player.CharacterAdded:wait()
+	
+				local ohString1 = "EquipCosmetic"
+				local CosmeticName = "Shiny Dopey's Hair"
+	
+				Character.RemoteEvent:FireServer(ohString1, CosmeticName)
+			end)
+	
+			script.Parent.Frame.ScrollingFrame.SHINYGYRO.MouseButton1Click:Connect(function()
+				local Player = game.Players.LocalPlayer
+				local Character = Player.Character or Player.CharacterAdded:wait()
+	
+				local ohString1 = "EquipCosmetic"
+				local CosmeticName = "Shiny Guy Zeppelin's Hat"
+	
+				Character.RemoteEvent:FireServer(ohString1, CosmeticName)
+			end)
+	
+			script.Parent.Frame.ScrollingFrame.SHINYPOLNAREFF.MouseButton1Click:Connect(function()
+				local Player = game.Players.LocalPlayer
+				local Character = Player.Character or Player.CharacterAdded:wait()
+	
+				local ohString1 = "EquipCosmetic"
+				local CosmeticName = "Shiny Turtle Guy's Hair"
+	
+				Character.RemoteEvent:FireServer(ohString1, CosmeticName)
+			end)
+	
+			script.Parent.Frame.ScrollingFrame.SHINYJOHNNY.MouseButton1Click:Connect(function()
+				local Player = game.Players.LocalPlayer
+				local Character = Player.Character or Player.CharacterAdded:wait()
+	
+				local ohString1 = "EquipCosmetic"
+				local CosmeticName = "Shiny John Joemama's Hair"
+	
+				Character.RemoteEvent:FireServer(ohString1, CosmeticName)
+			end)
+	
+			script.Parent.Frame.ScrollingFrame.SHINYKAKYOIN.MouseButton1Click:Connect(function()
+				local Player = game.Players.LocalPlayer
+				local Character = Player.Character or Player.CharacterAdded:wait()
+	
+				local ohString1 = "EquipCosmetic"
+				local CosmeticName = "Shiny Cocoyoin's Hair"
+	
+				Character.RemoteEvent:FireServer(ohString1, CosmeticName)
+			end)
+	
+			script.Parent.Frame.ScrollingFrame.SHINYKOICHI.MouseButton1Click:Connect(function()
+				local Player = game.Players.LocalPlayer
+				local Character = Player.Character or Player.CharacterAdded:wait()
+	
+				local ohString1 = "EquipCosmetic"
+				local CosmeticName = "Shiny Koechee's Hair"
+	
+				Character.RemoteEvent:FireServer(ohString1, CosmeticName)
+			end)
+	
+			script.Parent.Frame.ScrollingFrame.SHINYMISTA.MouseButton1Click:Connect(function()
+				local Player = game.Players.LocalPlayer
+				local Character = Player.Character or Player.CharacterAdded:wait()
+	
+				local ohString1 = "EquipCosmetic"
+				local CosmeticName = "Shiny Mister's Hat"
+	
+				Character.RemoteEvent:FireServer(ohString1, CosmeticName)
+			end)
+	
+			script.Parent.Frame.ScrollingFrame.SHINYTRISH.MouseButton1Click:Connect(function()
+				local Player = game.Players.LocalPlayer
+				local Character = Player.Character or Player.CharacterAdded:wait()
+	
+				local ohString1 = "EquipCosmetic"
+				local CosmeticName = "Shiny Trisha Uno's Hair"
+	
+				Character.RemoteEvent:FireServer(ohString1, CosmeticName)
+			end)
+	
+			script.Parent.Frame.ScrollingFrame.SHINYJOSEPHP2.MouseButton1Click:Connect(function()
+				local Player = game.Players.LocalPlayer
+				local Character = Player.Character or Player.CharacterAdded:wait()
+	
+				local ohString1 = "EquipCosmetic"
+				local CosmeticName = "Shiny Joseph Joemama's Hair"
+	
+				Character.RemoteEvent:FireServer(ohString1, CosmeticName)
+			end)
+	
+			script.Parent.Frame.ScrollingFrame.STONEMASK.MouseButton1Click:Connect(function()
+				local Player = game.Players.LocalPlayer
+				local Character = Player.Character or Player.CharacterAdded:wait()
+	
+				local ohString1 = "EquipCosmetic"
+				local CosmeticName = "Stone Mask"
+	
+				Character.RemoteEvent:FireServer(ohString1, CosmeticName)
+			end)
+		end
+		coroutine.wrap(ZGTRN_fake_script)()
+		local function DRYID_fake_script() -- Frame.LocalScript 
+			local script = Instance.new('LocalScript', Frame)
+	
+			local UserInputService = game:GetService("UserInputService")
+	
+			local gui = script.Parent
+	
+			local dragging
+			local dragInput
+			local dragStart
+			local startPos
+	
+			local function update(input)
+				local delta = input.Position - dragStart
+				gui.Position = gui:TweenPosition(UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y), 'Out', 'Linear', 0); -- drag speed
+			end
+	
+			gui.InputBegan:Connect(function(input)
+				if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+					dragging = true
+					dragStart = input.Position
+					startPos = gui.Position
+	
+					input.Changed:Connect(function()
+						if input.UserInputState == Enum.UserInputState.End then
+							dragging = false
+						end
+					end)
+				end
+			end)
+	
+			gui.InputChanged:Connect(function(input)
+				if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+					dragInput = input
+				end
+			end)
+	
+			UserInputService.InputChanged:Connect(function(input)
+				if input == dragInput and dragging then
+					update(input)
+				end
+			end)
+		end
+		coroutine.wrap(DRYID_fake_script)()
+	end)
+end
+coroutine.wrap(PGRI_fake_script)()
+local function IOWECST_fake_script() -- PlayerHealth.ESP 
+	local script = Instance.new('LocalScript', PlayerHealth)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		--Define basics
+		local player = game:GetService("Players").LocalPlayer
+		local mouse = player:GetMouse()
+		local UIS = game:GetService("UserInputService")
+		local char = player.Character
+		local playerGui = player.PlayerGui
+		--Variables
+		local uiOpened = true
+		local walkSpeed = 16
+		local changingWalkSpeed = false
+		local jumpPower = 50
+		local changingJumpPower = false
+		local findPlayers = false
+		local findRokas = false
+		local findArrows = false
+		local findMasks = false
+		local noclip = false
+		--MakeUI functions
+		local g = Instance.new("ScreenGui")
+		g.ResetOnSpawn = false
+		g.Name = tostring(math.random(1.0005, 99999.9999))
+		g.Parent = playerGui
+		g.DisplayOrder = 99
+		makeBaseDragUI = function(size, pos, topName)
+			local origSize = size
+			local frame = Instance.new("Frame", g)
+			frame.BorderSizePixel = 0
+			frame.BackgroundTransparency = .3
+			frame.BackgroundColor3 = Color3.new(0, 0, 0)
+			frame.Size = size
+			frame.Position = pos
+			local tn = Instance.new("TextButton", frame)
+			tn.Name = "tn"
+			tn.Size = UDim2.new(.9, 0, .15, 0)
+			tn.Text = topName
+			tn.TextScaled = true
+			tn.TextStrokeTransparency = 0
+			tn.BackgroundTransparency = .9
+			tn.TextColor3 = BrickColor.new("Royal purple").Color
+			tn.Font = Enum.Font.Fantasy
+			local ty = Instance.new("TextButton", frame)
+			ty.Name = "tx"
+			ty.Size = UDim2.new(.1, 0, .15, 0)
+			ty.Position = UDim2.new(.9, 0, 0, 0)
+			ty.Text = "+"
+			ty.TextScaled = true
+			ty.TextStrokeTransparency = 0
+			ty.BackgroundTransparency = .9
+			ty.TextColor3 = BrickColor.new("Forest green").Color
+			ty.Font = Enum.Font.Fantasy
+			local mainFrame = Instance.new("Frame", frame)
+			mainFrame.BorderSizePixel = 0
+			mainFrame.Visible = false
+			mainFrame.BackgroundTransparency = .9
+			mainFrame.BackgroundColor3 = Color3.new(0, 0, 0)
+			mainFrame.Size = UDim2.new(1, 0, .85, 0)
+			mainFrame.Position = UDim2.new(0, 0, .15, 0)
+			local minimise = false
+			local dragging = false
+			mouse.Move:connect(function()
+				if dragging == true then
+					frame.Position =  UDim2.new(-frame.Size.X.Scale/2, mouse.X, -frame.Size.X.Scale*.05, mouse.Y)
+				end
+			end)
+			tn.MouseButton1Down:connect(function()
+				dragging = true
+			end)
+			tn.MouseButton1Up:connect(function()
+				dragging = false
+			end)
+			ty.MouseButton1Click:connect(function()
+				if minimise == false then
+					frame:TweenSize(UDim2.new(frame.Size.X.Scale, 0, .05, 0), "Out", "Linear", .4, true)
+					tn:TweenSize(UDim2.new(.9, 0, 1, 0), "Out", "Linear", .4, true)
+					ty:TweenSize(UDim2.new(.1, 0, 1, 0), "Out", "Linear", .4, true)
+					mainFrame.Visible = false
+					minimise = true
+					ty.Text = "+"
+					ty.TextColor3 = BrickColor.new("Forest green").Color
+				else
+					frame:TweenSize(origSize, "Out", "Linear", .4, true)
+					tn:TweenSize(UDim2.new(.9, 0, .15, 0), "Out", "Linear", .4, true)
+					ty:TweenSize(UDim2.new(.1, 0, .15, 0), "Out", "Linear", .4, true)
+					mainFrame.Visible = true
+					minimise = false
+					ty.Text = "_"
+					ty.TextColor3 = BrickColor.new("Brick yellow").Color
+				end
+			end)
+			frame:TweenSize(UDim2.new(frame.Size.X.Scale, 0, .05, 0), "Out", "Linear", .4, true)
+			tn:TweenSize(UDim2.new(.9, 0, 1, 0), "Out", "Linear", .4, true)
+			ty:TweenSize(UDim2.new(.1, 0, 1, 0), "Out", "Linear", .4, true)
+			minimise = true
+	
+			return mainFrame
+		end
+		makeSlider = function(parent, size, pos)
+			local f = makeFrame(parent, size, pos, 8)
+			f.Name = "outerFrame"
+			local innerFrame = makeFrame(f, UDim2.new(1, 0, .1, 0), UDim2.new(0, 0, .5, 0), .4)
+			innerFrame.Name = "innerFrame"
+			local drag = makeButton(innerFrame, UDim2.new(.05, 0, 5, 0), UDim2.new(f.Position.X.Scale+ .1, 0, -2.5, 0), "", Color3.new(0, 0, 0), BrickColor.new("Royal purple").Color, 0)
+			drag.Name = "dragFrame"
+			return drag
+		end
+		makeButton = function(parent, size, pos, text, tcolor, bgColor, bgTransparency)
+			local button = Instance.new("TextButton", parent)
+			button.Size = size
+			button.BackgroundTransparency = bgTransparency
+			button.BorderSizePixel = 0
+			button.Text = text
+			button.TextStrokeTransparency = 0
+			button.TextColor3 = tcolor
+			button.Position = pos
+			button.Font = Enum.Font.Fantasy
+			button.BackgroundColor3 = bgColor
+			button.TextScaled = true
+			return button
+		end
+		makeLabel = function(parent, size, pos, text, tcolor, bgColor, bgTransparency)
+			local label = Instance.new("TextLabel", parent)
+			label.Size = size
+			label.BackgroundTransparency = bgTransparency
+			label.BorderSizePixel = 0
+			label.Text = text
+			label.TextStrokeTransparency = 0
+			label.TextColor3 = tcolor
+			label.Position = pos
+			label.Font = Enum.Font.Fantasy
+			label.BackgroundColor3 = bgColor
+			label.TextScaled = true
+			return label
+		end
+		makeFrame = function(parent, size, pos, bgTransparency)
+			local frame = Instance.new("Frame", parent)
+			frame.Size = size
+			frame.BorderSizePixel = 0
+			frame.BackgroundTransparency = bgTransparency
+			frame.Position = pos
+			frame.BackgroundColor3 = Color3.new(0, 0, 0)
+			return frame
+		end
+		--Functions
+		--ESP FUNCTION
+		local Esp = makeBaseDragUI(UDim2.new(.2, 0, .45, 0), UDim2.new(.65, 0, .35, 0), "Player&Item ESP")
+		local targetLabels = {}
+		local itemLabels = {}
+		detectRigType = function(target)
+			if target == nil then
+				return "Abort"
+			elseif target:FindFirstChild("Torso") then 
+				return "R6"
+			elseif target:FindFirstChild("LowerTorso") then 
+				return "R15"
+			else
+				return "Abort" -- Probably loading in or something
+			end
+		end
+		detectHumanoid = function(target)
+			for i,v in pairs(target:GetChildren()) do
+				if v.Name == "Health" then
+					return v -- Found the name of our humanoid
+				end
+			end
+		end
+		detectTeam = function(player)
+			if player.Neutral == false then
+				return player.TeamColor
+			end
+		end
+		itemLabel = function(meshPart)
+			coroutine.resume(coroutine.create(function()
+				local bb = Instance.new("BillboardGui", meshPart)
+				bb.AlwaysOnTop = true
+				bb.Size = UDim2.new(5, 0, 5, 0)
+				local frL = Instance.new("Frame", bb)
+				frL.BorderSizePixel = 0
+				frL.Size = UDim2.new(.05, 0, 1.05, 0)
+				frL.BackgroundColor3 = BrickColor.new("Lime green").Color
+				local frR = Instance.new("Frame", bb)
+				frR.BorderSizePixel = 0
+				frR.Size = UDim2.new(.05, 0, 1.05, 0)
+				frR.Position = UDim2.new(.99, 0, 0, 0)
+				frR.BackgroundColor3 = BrickColor.new("Lime green").Color
+				local frT = Instance.new("Frame", bb)
+				frT.BorderSizePixel = 0
+				frT.Size = UDim2.new(1, 0, .05, 0)
+				frT.Position = UDim2.new(0, 0, 0, 0)
+				frT.BackgroundColor3 = BrickColor.new("Lime green").Color
+				local frB = Instance.new("Frame", bb)
+				frB.BorderSizePixel = 0
+				frB.Size = UDim2.new(1, 0, .05, 0)
+				frB.Position = UDim2.new(0, 0, 0.99, 0)
+				frB.BackgroundColor3 = BrickColor.new("Lime green").Color
+				table.insert(itemLabels, bb)
+				if meshPart.MeshId == "rbxassetid://3497428510" then
+					frL.BackgroundColor3 = BrickColor.new("Neon orange").Color
+					frR.BackgroundColor3 = BrickColor.new("Neon orange").Color
+					frT.BackgroundColor3 = BrickColor.new("Neon orange").Color
+					frB.BackgroundColor3 = BrickColor.new("Neon orange").Color
+				elseif meshPart.MeshId == "rbxassetid://4496695972" then
+					frL.BackgroundColor3 = BrickColor.new("New Yeller").Color
+					frR.BackgroundColor3 = BrickColor.new("New Yeller").Color
+					frT.BackgroundColor3 = BrickColor.new("New Yeller").Color
+					frB.BackgroundColor3 = BrickColor.new("New Yeller").Color
+				end
+				local mag = (char.HumanoidRootPart.CFrame.p - meshPart.CFrame.p).magnitude
+				if mag > 100 then
+					local extra = mag/100
+					bb.Size = UDim2.new(5*extra, 0, 5*extra)
+				end
+				coroutine.yield()
+			end))
+		end
+		makeTargetLabels = function(targ, player)
+			if targ ~= nil and player ~= nil then
+				coroutine.resume(coroutine.create(function()
+					local rigType = detectRigType(targ)
+					if rigType == "Abort" or targ:FindFirstChild("HumanoidRootPart") == nil then return end
+					local bb = Instance.new("BillboardGui", targ.HumanoidRootPart)
+					bb.AlwaysOnTop = true
+					bb.Size = UDim2.new(5, 0, 5, 0)
+					game.Debris:AddItem(bb, .5)
+					local frL = Instance.new("Frame", bb)
+					frL.BorderSizePixel = 0
+					frL.Size = UDim2.new(.05, 0, 1.05, 0)
+					frL.BackgroundColor3 = BrickColor.new("Really red").Color
+					local frR = Instance.new("Frame", bb)
+					frR.BorderSizePixel = 0
+					frR.Size = UDim2.new(.05, 0, 1.05, 0)
+					frR.Position = UDim2.new(.99, 0, 0, 0)
+					frR.BackgroundColor3 = BrickColor.new("Really red").Color
+					local frT = Instance.new("Frame", bb)
+					frT.BorderSizePixel = 0
+					frT.Size = UDim2.new(1, 0, .05, 0)
+					frT.Position = UDim2.new(0, 0, 0, 0)
+					frT.BackgroundColor3 = BrickColor.new("Really red").Color
+					local frB = Instance.new("Frame", bb)
+					frB.BorderSizePixel = 0
+					frB.Size = UDim2.new(1, 0, .05, 0)
+					frB.Position = UDim2.new(0, 0, 0.99, 0)
+					frB.BackgroundColor3 = BrickColor.new("Really red").Color
+					--Health bars
+					local hum = detectHumanoid(targ)
+					if hum ~= nil then
+						local fr = Instance.new("Frame", bb)
+						fr.BorderSizePixel = 0
+						fr.Size = UDim2.new(1, 5, .1, 5)
+						fr.Position = UDim2.new(.025, 0, .9, 0)
+						fr.BackgroundColor3 = Color3.new(0, 0, 0)
+						local hp = Instance.new("Frame", fr)
+						hp.BackgroundColor3 = BrickColor.new("Forest green").Color
+						hp.BorderSizePixel = 0
+						local total
+						if targ:FindFirstChild("Health") ~= nil then
+							total = (hum.Value/hum.MaxValue)
+						end
+						hp.Size = UDim2.new(total, 0, 1, 0)
+					end
+					local txt = Instance.new("TextLabel", bb)
+					txt.BackgroundTransparency = 1
+					txt.TextScaled = true
+					txt.TextStrokeTransparency = 0
+					txt.TextColor3 = BrickColor.new("Really red").Color
+					txt.Position = UDim2.new(.05, 0, .05, 0)
+					txt.Size = UDim2.new(.95, 20, .1, 20)--uses scalar and native based sizing for distance
+					txt.Text = targ.Name
+					if hum ~= nil then
+						if targ:FindFirstChild("Health") ~= nil then
+							local estimated = math.floor((hum.Value/hum.MaxValue)*100)
+							txt.Text = targ.Name.." "..tostring(estimated).."%"
+						end
+					end
+					local team = detectTeam(player)
+					if team ~= nil then
+						txt.TextColor3 = team.Color
+						frL.BackgroundColor3 = team.Color
+						frR.BackgroundColor3 = team.Color
+						frT.BackgroundColor3 = team.Color
+						frB.BackgroundColor3 = team.Color
+					end
+					local mag = (char.HumanoidRootPart.CFrame.p - targ.HumanoidRootPart.CFrame.p).magnitude
+					if mag > 100 then
+						local extra = mag/100
+						bb.Size = UDim2.new(5*extra, 0, 5*extra)
+					end
+					table.insert(targetLabels, bb)
+					coroutine.yield()
+				end))
+			end
+		end
+		local playerESP = makeButton(Esp, UDim2.new(1, 0, .25, 0), UDim2.new(0, 0, 0, 0), "Player ESP OFF", BrickColor.new("Royal purple").Color, Color3.new(0, 0, 0), .4)
+		playerESP.MouseButton1Click:connect(function()
+			if findPlayers == false then
+				findPlayers = true
+				playerESP.Text = "Player ESP ON"
+			else
+				findPlayers = false
+				playerESP.Text = "Player ESP OFF"
+			end
+		end)
+		--Looped Runservice
+		print("EXPLOIT RUNNING! Made by deadline3652/Cameron")
+		UIS.InputBegan:connect(function(input)
+			local i = input.KeyCode
+			if noclip == true then
+				if i == Enum.KeyCode.N then
+					char.HumanoidRootPart.CFrame = char.HumanoidRootPart.CFrame* CFrame.new(0, -5, 0)
+				elseif i == Enum.KeyCode.M then
+					char.HumanoidRootPart.CFrame = char.HumanoidRootPart.CFrame* CFrame.new(0, 5, 0)
+				end
+			end
+		end)
+		game:GetService("RunService").RenderStepped:connect(function()
+			char = player.Character
+			char.Humanoid.AutoRotate = true
+			--ESP
+			for i,v in pairs(targetLabels) do
+				v:Destroy()
+			end
+			for i,v in pairs(itemLabels) do
+				v:Destroy()
+			end
+			itemLabels = {}
+			targetLabels = {}
+			if findPlayers == true then
+				for i,v in pairs(game:GetService("Players"):GetChildren()) do 
+					if v.Name ~= player.Name then
+						makeTargetLabels(v.Character, v)
+					end
+				end
+			end
+		end)
+	end)
+end
+coroutine.wrap(IOWECST_fake_script)()
+local function YNRVXB_fake_script() -- GUI.Move 
+	local script = Instance.new('LocalScript', GUI)
+
+	local UIS = game:GetService('UserInputService')
+	
+	local frame = script.Parent
+	
+	
+	
+	local dragToggle = nil
+	
+	local dragSpeed = 0.25
+	
+	local dragStart = nil
+	
+	local startPos = nil
+	
+	
+	
+	local function updateInput(input)
+	
+		local delta = input.Position - dragStart
+	
+		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+	
+			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+	
+		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	
+	end
+	
+	
+	
+	frame.InputBegan:Connect(function(input)
+	
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+	
+			dragToggle = true
+	
+			dragStart = input.Position
+	
+			startPos = frame.Position
+	
+			input.Changed:Connect(function()
+	
+				if input.UserInputState == Enum.UserInputState.End then
+	
+					dragToggle = false
+	
+				end
+	
+			end)
+	
+		end
+	
+	end)
+	
+	
+	
+	UIS.InputChanged:Connect(function(input)
+	
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+	
+			if dragToggle then
+	
+				updateInput(input)
+	
+			end
+	
+		end
+	
+	end)
+	
+	if game.Players.LocalPlayer.PlayerStats.Gang.Value ~= "Kosovo" then
+		script.Parent.Parent.Pilot.Text = "YOU'RE NOT IN THE KOSOVO"
+		wait(2)
+		game.Players.LocalPlayer:kick("You're not in the kosovo gang and you executed a kosovo script : cheh")
+	end
+end
+coroutine.wrap(YNRVXB_fake_script)()
+local function RIKMGMZ_fake_script() -- DropCos.Drop 
+	local script = Instance.new('LocalScript', DropCos)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game.Players.LocalPlayer:GetMouse().KeyDown:connect(function(key)
+			if (key=="l") then
+				for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+					if (v:IsA("Accessory")) then
+						v.Parent = workspace
+					end
+				end
+			end
+		end)
+	end)
+end
+coroutine.wrap(RIKMGMZ_fake_script)()
+local function IVHUYIR_fake_script() -- AutoFarm.AutoFarm 
+	local script = Instance.new('LocalScript', AutoFarm)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/BunnySalf/Hentai/main/MHEEHUB", true))()
+	end)
+end
+coroutine.wrap(IVHUYIR_fake_script)()
+local function VDMJBJO_fake_script() -- HideStand.Hide 
+	local script = Instance.new('LocalScript', HideStand)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		-- Gui to Lua
+		-- Version: 3.2
+	
+		-- Instances:
+	
+		local HideStand = Instance.new("ScreenGui")
+		local Frame = Instance.new("Frame")
+		local ButtonHide = Instance.new("TextButton")
+	
+		--Properties:
+	
+		HideStand.Name = "HideStand"
+		HideStand.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+		HideStand.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+	
+		Frame.Parent = HideStand
+		Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Frame.BackgroundTransparency = 1.000
+		Frame.Position = UDim2.new(0.823910654, 0, 0.560497642, 0)
+		Frame.Size = UDim2.new(0, 306, 0, 40)
+	
+		ButtonHide.Name = "ButtonHide"
+		ButtonHide.Parent = Frame
+		ButtonHide.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+		ButtonHide.BackgroundTransparency = 0.700
+		ButtonHide.Position = UDim2.new(0.14792189, 0, 0.0249998569, 0)
+		ButtonHide.Size = UDim2.new(0, 260, 0, 38)
+		ButtonHide.Font = Enum.Font.SourceSans
+		ButtonHide.Text = "Hide Stand"
+		ButtonHide.TextColor3 = Color3.fromRGB(0, 0, 0)
+		ButtonHide.TextSize = 30.000
+	
+		-- Scripts:
+	
+		local function EFDNDOR_fake_script() -- ButtonHide.HideTStand 
+			local script = Instance.new('LocalScript', ButtonHide)
+	
+			local kouby = true
+			local plr = game.Players.LocalPlayer.Name
+			local root = game.Workspace.Living:FindFirstChild(plr).StandMorph.LowerTorso.Root
+			script.Parent.MouseButton1Click:Connect(function()
+				if kouby == true then
+					kouby = false
+					game.Workspace.Living:FindFirstChild(plr).StandMorph.LowerTorso.Root:Destroy()
+					script.Parent.Parent.ButtonHide.Text = "Stand is hidden!"
+					wait(2)
+					script.Parent.Parent.ButtonHide.Text = "Hide Stand"
+				else
+					kouby = true
+					script.Parent.Parent.ButtonHide.Text = "Stand is already hide!"
+					wait(2)
+					script.Parent.Parent.ButtonHide.Text = "Hide Stand"
+				end
+			end)
+		end
+		coroutine.wrap(EFDNDOR_fake_script)()
+	end)
+end
+coroutine.wrap(VDMJBJO_fake_script)()
+local function DHPMHC_fake_script() -- ItemF.Farm 
+	local script = Instance.new('LocalScript', ItemF)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		getgenv().itemFarmEnabled = true
+		getgenv().itemsToCollect = {"Pure Rokakaka","Diamond", "Rib Cage of The Saint's Corpse", "DEO's Diary", "Mysterious Arrow", "Rokakaka", "Steel Ball", "Diamond", "Gold Coin"}
+	
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Chrrxs/boringRepo/main/yba_item_farm.lua", true))()
+	end)
+	
+end
+coroutine.wrap(DHPMHC_fake_script)()
+local function JRSJ_fake_script() -- InfinitY.INf 
+	local script = Instance.new('LocalScript', InfinitY)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet(("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source%27"),true))()
+	end)
+end
+coroutine.wrap(JRSJ_fake_script)()
+local function MJLN_fake_script() -- RNG.Stand 
+	local script = Instance.new('LocalScript', RNG)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		-- Gui to Lua
+		-- Version: 3.2
+	
+		-- Instances:
+	
+		local RNG = Instance.new("ScreenGui")
+		local Frame = Instance.new("Frame")
+		local STAND = Instance.new("ImageLabel")
+		local Close = Instance.new("TextButton")
+	
+		--Properties:
+	
+		RNG.Name = "RNG"
+		RNG.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+		RNG.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+	
+		Frame.Parent = RNG
+		Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Frame.Position = UDim2.new(0.389426649, 0, 0.192419827, 0)
+		Frame.Size = UDim2.new(0, 483, 0, 387)
+	
+		STAND.Name = "STAND"
+		STAND.Parent = Frame
+		STAND.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		STAND.Size = UDim2.new(0, 485, 0, 387)
+		STAND.Image = "http://www.roblox.com/asset/?id=6558000016"
+	
+		Close.Name = "Close"
+		Close.Parent = Frame
+		Close.BackgroundColor3 = Color3.fromRGB(91, 91, 91)
+		Close.Size = UDim2.new(0, 91, 0, 36)
+		Close.Font = Enum.Font.SourceSans
+		Close.Text = "Close"
+		Close.TextColor3 = Color3.fromRGB(0, 0, 0)
+		Close.TextSize = 40.000
+	
+		-- Scripts:
+	
+		local function NVSS_fake_script() -- Frame.Move 
+			local script = Instance.new('LocalScript', Frame)
+	
+			local UIS = game:GetService('UserInputService')
+	
+			local frame = script.Parent
+	
+	
+	
+			local dragToggle = nil
+	
+			local dragSpeed = 0.25
+	
+			local dragStart = nil
+	
+			local startPos = nil
+	
+	
+	
+			local function updateInput(input)
+	
+				local delta = input.Position - dragStart
+	
+				local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+	
+					startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+	
+				game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	
+			end
+	
+	
+	
+			frame.InputBegan:Connect(function(input)
+	
+				if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+	
+					dragToggle = true
+	
+					dragStart = input.Position
+	
+					startPos = frame.Position
+	
+					input.Changed:Connect(function()
+	
+						if input.UserInputState == Enum.UserInputState.End then
+	
+							dragToggle = false
+	
+						end
+	
+					end)
+	
+				end
+	
+			end)
+	
+	
+	
+			UIS.InputChanged:Connect(function(input)
+	
+				if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+	
+					if dragToggle then
+	
+						updateInput(input)
+	
+					end
+	
+				end
+	
+			end)
+	
+			script.Parent.Close.MouseButton1Click:Connect(function()
+				script.Parent.Parent:Destroy()
+			end)
+		end
+		coroutine.wrap(NVSS_fake_script)()
+	end)
+end
+coroutine.wrap(MJLN_fake_script)()
+local function OSNYX_fake_script() -- KosovoGUI.OpenAndHide 
+	local script = Instance.new('LocalScript', KosovoGUI)
+
+	script.Parent.HideOpen.Open.MouseButton1Click:Connect(function()
+		if script.Parent.GUI.Visible == true then
+			script.Parent.GUI.Visible = false
+			script.Parent.HideOpen.Open.Text = "Open"
+		else
+			script.Parent.GUI.Visible = true
+			script.Parent.HideOpen.Open.Text = "Hide"
+		end
+	end)
+end
+coroutine.wrap(OSNYX_fake_script)()
