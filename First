@@ -233,118 +233,15 @@ Open.TextSize = 30.000
 
 -- Scripts:
 
-local function OGOJPHT_fake_script() -- Pilote.Mod 
+local function NGZIGK_fake_script() -- Pilote.Mod 
 	local script = Instance.new('LocalScript', Pilote)
 
 	script.Parent.MouseButton1Click:Connect(function()
-		local ScreenGui = Instance.new("ScreenGui")
-		local Pilot = Instance.new("TextButton")
-		local TextButton = Instance.new("TextButton")
-		local TextLabel = Instance.new("TextLabel")
-	
-	
-	
-		ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-		ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-		ScreenGui.ResetOnSpawn = false
-	
-		Pilot.Name = "Pilot"
-		Pilot.Parent = ScreenGui
-		Pilot.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
-		Pilot.BorderColor3 = Color3.fromRGB(0, 0, 0)
-		Pilot.BorderSizePixel = 2
-		Pilot.Position = UDim2.new(0.856776357, 0, 0.413897902, 0)
-		Pilot.Size = UDim2.new(0.143223614, 0, 0.0332764797, 0)
-		Pilot.Font = Enum.Font.Cartoon
-		Pilot.Text = "Active pilot mode"
-		Pilot.TextColor3 = Color3.fromRGB(255, 255, 255)
-		Pilot.TextScaled = true
-		Pilot.TextSize = 14.000
-		Pilot.TextStrokeTransparency = 0.000
-		Pilot.TextWrapped = true
-	
-		TextButton.Parent = ScreenGui
-		TextButton.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
-		TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
-		TextButton.BorderSizePixel = 2
-		TextButton.Position = UDim2.new(0.836000025, 0, 0.414000005, 0)
-		TextButton.Size = UDim2.new(0.0200513061, 0, 0.0332764797, 0)
-		TextButton.Font = Enum.Font.SourceSans
-		TextButton.Text = ">"
-		TextButton.TextColor3 = Color3.fromRGB(199, 0, 0)
-		TextButton.TextScaled = true
-		TextButton.TextSize = 14.000
-		TextButton.TextStrokeTransparency = 0.000
-		TextButton.TextWrapped = true
-	
-		TextLabel.Parent = ScreenGui
-		TextLabel.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
-		TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
-		TextLabel.BorderSizePixel = 2
-		TextLabel.Position = UDim2.new(0.856776416, 0, 0.412776411, 0)
-		TextLabel.Size = UDim2.new(0.142718449, 0, 0.0343980342, 0)
-		TextLabel.Visible = false
-		TextLabel.Font = Enum.Font.Cartoon
-		TextLabel.Text = "Pilot mode activated!"
-		TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-		TextLabel.TextScaled = true
-		TextLabel.TextSize = 14.000
-		TextLabel.TextStrokeTransparency = 0.000
-		TextLabel.TextWrapped = true
-	
-	
-	
-		local function WJRQL_fake_script() 
-			local script = Instance.new('LocalScript', Pilot)
-	
-	
-	
-			local kouby = true
-			local plr = game.Players.LocalPlayer.Name
-			local root = game.Workspace.Living:FindFirstChild(plr).LowerTorso.Root
-			script.Parent.MouseButton1Click:Connect(function()
-				if kouby == true then
-					kouby = false
-					game.Workspace.Living:FindFirstChild(plr).LowerTorso.Root:Destroy()
-					script.Parent.Parent.Pilot.Text = "Pilot activated!"
-					wait(2)
-					script.Parent.Parent.Pilot.Text = "Active Pilot mode"
-				else
-					kouby = true
-					script.Parent.Parent.Pilot.Text = "Pilot mode is activated!"
-					wait(2)
-					script.Parent.Parent.Pilot.Text = "Active pilot mode"
-				end
-			end)
-	
-	
-		end
-		coroutine.wrap(WJRQL_fake_script)()
-		local function VJBMO_fake_script()
-			local script = Instance.new('LocalScript', TextButton)
-	
-			local kosovo = true
-			script.Parent.MouseButton1Click:Connect(function()
-				if kosovo == true then
-					kosovo = false
-					script.Parent.Parent.Pilot:TweenPosition(UDim2.new(0.999, 0,0.414, 0),"Out","Linear",0.3)
-					script.Parent.Parent.TextButton.Text = "<"
-					script.Parent.Parent.TextButton:TweenPosition(UDim2.new(0.986, 0,0.414, 0),"Out","Linear",0.3)
-				else
-					kosovo = true
-					script.Parent.Parent.Pilot:TweenPosition(UDim2.new(0.857, 0,0.414, 0),"Out","Linear",0.3)
-					script.Parent.Parent.TextButton.Text = ">"
-					script.Parent.Parent.TextButton:TweenPosition(UDim2.new(0.836, 0,0.414, 0),"Out","Linear",0.3)
-	
-				end
-			end)
-	
-		end
-		coroutine.wrap(VJBMO_fake_script)()
+		loadstring(game:HttpGet("https://pastebin.com/raw/eVzpT0JA", true))()
 	end)
 end
-coroutine.wrap(OGOJPHT_fake_script)()
-local function BTNW_fake_script() -- Cosmetics.Cos 
+coroutine.wrap(NGZIGK_fake_script)()
+local function QMPWOYB_fake_script() -- Cosmetics.Cos 
 	local script = Instance.new('LocalScript', Cosmetics)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1745,8 +1642,8 @@ local function BTNW_fake_script() -- Cosmetics.Cos
 		coroutine.wrap(DRYID_fake_script)()
 	end)
 end
-coroutine.wrap(BTNW_fake_script)()
-local function IYFO_fake_script() -- PlayerHealth.ESP 
+coroutine.wrap(QMPWOYB_fake_script)()
+local function LQFP_fake_script() -- PlayerHealth.ESP 
 	local script = Instance.new('LocalScript', PlayerHealth)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -2085,8 +1982,8 @@ local function IYFO_fake_script() -- PlayerHealth.ESP
 		end)
 	end)
 end
-coroutine.wrap(IYFO_fake_script)()
-local function FPCJI_fake_script() -- GUI.Move 
+coroutine.wrap(LQFP_fake_script)()
+local function SKETH_fake_script() -- GUI.Move 
 	local script = Instance.new('LocalScript', GUI)
 
 	local UIS = game:GetService('UserInputService')
@@ -2159,8 +2056,8 @@ local function FPCJI_fake_script() -- GUI.Move
 	
 	end)
 end
-coroutine.wrap(FPCJI_fake_script)()
-local function BCUULE_fake_script() -- DropCos.Drop 
+coroutine.wrap(SKETH_fake_script)()
+local function WATOB_fake_script() -- DropCos.Drop 
 	local script = Instance.new('LocalScript', DropCos)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -2175,16 +2072,16 @@ local function BCUULE_fake_script() -- DropCos.Drop
 		end)
 	end)
 end
-coroutine.wrap(BCUULE_fake_script)()
-local function GYCAJLK_fake_script() -- AutoFarm.AutoFarm 
+coroutine.wrap(WATOB_fake_script)()
+local function FKTMC_fake_script() -- AutoFarm.AutoFarm 
 	local script = Instance.new('LocalScript', AutoFarm)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/BunnySalf/Hentai/main/MHEEHUB", true))()
 	end)
 end
-coroutine.wrap(GYCAJLK_fake_script)()
-local function ECNJFGB_fake_script() -- HideStand.Hide 
+coroutine.wrap(FKTMC_fake_script)()
+local function EEAVF_fake_script() -- HideStand.Hide 
 	local script = Instance.new('LocalScript', HideStand)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -2193,61 +2090,140 @@ local function ECNJFGB_fake_script() -- HideStand.Hide
 	
 		-- Instances:
 	
-		local HideStand = Instance.new("ScreenGui")
-		local Frame = Instance.new("Frame")
-		local ButtonHide = Instance.new("TextButton")
+		local Martin = Instance.new("ScreenGui")
+		local HideStand = Instance.new("Frame")
+		local TextButton = Instance.new("TextButton")
+		local TextLabel = Instance.new("TextLabel")
 	
 		--Properties:
 	
+		Martin.Name = "Martin"
+		Martin.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+		Martin.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+	
 		HideStand.Name = "HideStand"
-		HideStand.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-		HideStand.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+		HideStand.Parent = Martin
+		HideStand.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		HideStand.BackgroundTransparency = 0.850
+		HideStand.Position = UDim2.new(0.866686761, 0, 0.56704706, 0)
+		HideStand.Size = UDim2.new(0, 130, 0, 40)
 	
-		Frame.Parent = HideStand
-		Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-		Frame.BackgroundTransparency = 1.000
-		Frame.Position = UDim2.new(0.823910654, 0, 0.560497642, 0)
-		Frame.Size = UDim2.new(0, 306, 0, 40)
+		TextButton.Parent = HideStand
+		TextButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+		TextButton.Position = UDim2.new(-0.269230783, 0, 0.375, 0)
+		TextButton.Size = UDim2.new(0, 200, 0, 50)
+		TextButton.Font = Enum.Font.Roboto
+		TextButton.Text = "Hide Stand"
+		TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+		TextButton.TextSize = 30.000
+		TextButton.TextStrokeTransparency = 0.000
 	
-		ButtonHide.Name = "ButtonHide"
-		ButtonHide.Parent = Frame
-		ButtonHide.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-		ButtonHide.BackgroundTransparency = 0.700
-		ButtonHide.Position = UDim2.new(0.14792189, 0, 0.0249998569, 0)
-		ButtonHide.Size = UDim2.new(0, 260, 0, 38)
-		ButtonHide.Font = Enum.Font.SourceSans
-		ButtonHide.Text = "Hide Stand"
-		ButtonHide.TextColor3 = Color3.fromRGB(0, 0, 0)
-		ButtonHide.TextSize = 30.000
+		TextLabel.Parent = HideStand
+		TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		TextLabel.BackgroundTransparency = 0.850
+		TextLabel.Size = UDim2.new(0, 130, 0, 15)
+		TextLabel.Font = Enum.Font.SourceSans
+		TextLabel.Text = "Move"
+		TextLabel.TextColor3 = Color3.fromRGB(72, 0, 255)
+		TextLabel.TextSize = 15.000
 	
 		-- Scripts:
 	
-		local function EFDNDOR_fake_script() -- ButtonHide.HideTStand 
-			local script = Instance.new('LocalScript', ButtonHide)
+		local function YKHPS_fake_script() -- HideStand.Script 
+			local script = Instance.new('LocalScript', HideStand)
 	
-			local kouby = true
-			local plr = game.Players.LocalPlayer.Name
-			local root = game.Workspace.Living:FindFirstChild(plr).StandMorph.LowerTorso.Root
-			script.Parent.MouseButton1Click:Connect(function()
+			script.Parent.TextButton.MouseButton1Click:Connect(function()
+				local kouby = true
+				local plr = game.Players.LocalPlayer.Name
+				local root = game.Workspace.Living:FindFirstChild(plr).StandMorph.LowerTorso.Root
 				if kouby == true then
 					kouby = false
 					game.Workspace.Living:FindFirstChild(plr).StandMorph.LowerTorso.Root:Destroy()
-					script.Parent.Parent.ButtonHide.Text = "Stand is hidden!"
-					wait(2)
-					script.Parent.Parent.ButtonHide.Text = "Hide Stand"
-				else
-					kouby = true
-					script.Parent.Parent.ButtonHide.Text = "Stand is already hide!"
-					wait(2)
-					script.Parent.Parent.ButtonHide.Text = "Hide Stand"
+					script.Parent.TextButton.Text = "Stand is hidden!"
+					wait(3)
+					script.Parent.TextButton.Text = "Hide Stand"
 				end
 			end)
 		end
-		coroutine.wrap(EFDNDOR_fake_script)()
+		coroutine.wrap(YKHPS_fake_script)()
+		local function JWWMZ_fake_script() -- HideStand.Move 
+			local script = Instance.new('LocalScript', HideStand)
+	
+			local UIS = game:GetService('UserInputService')
+	
+			local frame = script.Parent
+	
+	
+	
+			local dragToggle = nil
+	
+			local dragSpeed = 0
+	
+			local dragStart = nil
+	
+			local startPos = nil
+	
+	
+	
+			local function updateInput(input)
+	
+				local delta = input.Position - dragStart
+	
+				local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+	
+					startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+	
+				game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	
+			end
+	
+	
+	
+			frame.InputBegan:Connect(function(input)
+	
+				if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+	
+					dragToggle = true
+	
+					dragStart = input.Position
+	
+					startPos = frame.Position
+	
+					input.Changed:Connect(function()
+	
+						if input.UserInputState == Enum.UserInputState.End then
+	
+							dragToggle = false
+	
+						end
+	
+					end)
+	
+				end
+	
+			end)
+	
+	
+	
+			UIS.InputChanged:Connect(function(input)
+	
+				if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+	
+					if dragToggle then
+	
+						updateInput(input)
+	
+					end
+	
+				end
+	
+			end)
+		end
+		coroutine.wrap(JWWMZ_fake_script)()
 	end)
 end
-coroutine.wrap(ECNJFGB_fake_script)()
-local function DMHXSG_fake_script() -- ItemF.Farm 
+coroutine.wrap(EEAVF_fake_script)()
+local function GOLXYFS_fake_script() -- ItemF.Farm 
 	local script = Instance.new('LocalScript', ItemF)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -2258,16 +2234,16 @@ local function DMHXSG_fake_script() -- ItemF.Farm
 	end)
 	
 end
-coroutine.wrap(DMHXSG_fake_script)()
-local function PANPPHO_fake_script() -- InfinitY.INf 
+coroutine.wrap(GOLXYFS_fake_script)()
+local function KNRDXE_fake_script() -- InfinitY.INf 
 	local script = Instance.new('LocalScript', InfinitY)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGet(("https://raw.githubusercontent.com/NikuBaguette/Script-1/main/InfYield"),true))()
 	end)
 end
-coroutine.wrap(PANPPHO_fake_script)()
-local function SUVI_fake_script() -- RNG.Stand 
+coroutine.wrap(KNRDXE_fake_script)()
+local function YIKP_fake_script() -- RNG.Stand 
 	local script = Instance.new('LocalScript', RNG)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -2389,8 +2365,8 @@ local function SUVI_fake_script() -- RNG.Stand
 		coroutine.wrap(NVSS_fake_script)()
 	end)
 end
-coroutine.wrap(SUVI_fake_script)()
-local function VGRGBE_fake_script() -- Autiste.Autiscript 
+coroutine.wrap(YIKP_fake_script)()
+local function FHYS_fake_script() -- Autiste.Autiscript 
 	local script = Instance.new('LocalScript', Autiste)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -2409,8 +2385,8 @@ local function VGRGBE_fake_script() -- Autiste.Autiscript
 		end
 	end)
 end
-coroutine.wrap(VGRGBE_fake_script)()
-local function NKGFFGF_fake_script() -- Amogus.Amogus 
+coroutine.wrap(FHYS_fake_script)()
+local function WCPHA_fake_script() -- Amogus.Amogus 
 	local script = Instance.new('LocalScript', Amogus)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -2432,8 +2408,8 @@ local function NKGFFGF_fake_script() -- Amogus.Amogus
 		end
 	end)
 end
-coroutine.wrap(NKGFFGF_fake_script)()
-local function IJYILOR_fake_script() -- KosovoGUI.OpenAndHide 
+coroutine.wrap(WCPHA_fake_script)()
+local function VRSPKM_fake_script() -- KosovoGUI.OpenAndHide 
 	local script = Instance.new('LocalScript', KosovoGUI)
 
 	script.Parent.HideOpen.Open.MouseButton1Click:Connect(function()
@@ -2446,8 +2422,8 @@ local function IJYILOR_fake_script() -- KosovoGUI.OpenAndHide
 		end
 	end)
 end
-coroutine.wrap(IJYILOR_fake_script)()
-local function OQUU_fake_script() -- KosovoGUI.Kick 
+coroutine.wrap(VRSPKM_fake_script)()
+local function XEXARG_fake_script() -- KosovoGUI.Kick 
 	local script = Instance.new('LocalScript', KosovoGUI)
 
 	local plr = game.Players.LocalPlayer
@@ -2457,4 +2433,4 @@ local function OQUU_fake_script() -- KosovoGUI.Kick
 		plr:kick("You're not in the kosovo gang and you executed a kosovo script : cheh")
 	end
 end
-coroutine.wrap(OQUU_fake_script)()
+coroutine.wrap(XEXARG_fake_script)() 
