@@ -3,300 +3,247 @@
 
 -- Instances:
 
-local Stand = Instance.new("ScreenGui")
-local Frame2 = Instance.new("Frame")
-local Pseudo = Instance.new("TextLabel")
-local Prestige = Instance.new("TextLabel")
-local Level = Instance.new("TextLabel")
-local Stand_2 = Instance.new("TextLabel")
+local StandViewer = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local Pseudo = Instance.new("TextBox")
+local Activation = Instance.new("TextButton")
+local Cringe = Instance.new("TextButton")
+local Finded = Instance.new("Frame")
+local Named = Instance.new("TextLabel")
+local Stand = Instance.new("TextLabel")
 local Spec = Instance.new("TextLabel")
+local Roka = Instance.new("TextLabel")
+local Arrow = Instance.new("TextLabel")
 local Money = Instance.new("TextLabel")
-local Arrows = Instance.new("TextLabel")
-local Rokakaka = Instance.new("TextLabel")
-local TextBox = Instance.new("TextBox")
-local TextButton = Instance.new("TextButton")
-local del = Instance.new("TextButton")
+local close = Instance.new("TextButton")
+local What = Instance.new("TextButton")
+local Whatt = Instance.new("TextBox")
 
 --Properties:
 
-Stand.Name = "Stand"
-Stand.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-Stand.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+StandViewer.Name = "StandViewer"
+StandViewer.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+StandViewer.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-Frame2.Name = "Frame2"
-Frame2.Parent = Stand
-Frame2.BackgroundColor3 = Color3.fromRGB(37, 38, 48)
-Frame2.Position = UDim2.new(0.176539183, 0, 0.103058994, 0)
-Frame2.Size = UDim2.new(0, 234, 0, 425)
+Frame.Parent = StandViewer
+Frame.Active = true
+Frame.BackgroundColor3 = Color3.fromRGB(49, 255, 242)
+Frame.BackgroundTransparency = 0.700
+Frame.Position = UDim2.new(0.399704099, 0, 0.453136981, 0)
+Frame.Size = UDim2.new(0, 259, 0, 53)
 
 Pseudo.Name = "Pseudo"
-Pseudo.Parent = Frame2
-Pseudo.BackgroundColor3 = Color3.fromRGB(110, 97, 154)
+Pseudo.Parent = Frame
+Pseudo.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 Pseudo.BackgroundTransparency = 0.800
-Pseudo.Position = UDim2.new(0.122358978, 0, 0.0537313446, 0)
-Pseudo.Size = UDim2.new(0, 176, 0, 30)
+Pseudo.Position = UDim2.new(0.111981802, 0, -0.692830205, 0)
+Pseudo.Size = UDim2.new(0, 200, 0, 50)
 Pseudo.Font = Enum.Font.Cartoon
-Pseudo.Text = "Name"
-Pseudo.TextColor3 = Color3.fromRGB(255, 255, 255)
-Pseudo.TextScaled = true
-Pseudo.TextSize = 20.000
+Pseudo.Text = ""
+Pseudo.TextColor3 = Color3.fromRGB(217, 204, 23)
+Pseudo.TextSize = 35.000
 Pseudo.TextStrokeTransparency = 0.000
-Pseudo.TextTransparency = 0.500
-Pseudo.TextWrapped = true
 
-Prestige.Name = "Prestige"
-Prestige.Parent = Frame2
-Prestige.BackgroundColor3 = Color3.fromRGB(110, 97, 154)
-Prestige.BackgroundTransparency = 0.800
-Prestige.Position = UDim2.new(0.122358978, 0, 0.144731596, 0)
-Prestige.Size = UDim2.new(0, 176, 0, 30)
-Prestige.Font = Enum.Font.Cartoon
-Prestige.Text = "Prestige"
-Prestige.TextColor3 = Color3.fromRGB(255, 255, 255)
-Prestige.TextScaled = true
-Prestige.TextSize = 20.000
-Prestige.TextStrokeTransparency = 0.000
-Prestige.TextTransparency = 0.500
-Prestige.TextWrapped = true
+Activation.Name = "Activation"
+Activation.Parent = Frame
+Activation.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Activation.BackgroundTransparency = 0.800
+Activation.Position = UDim2.new(0.111969113, 0, 0.773584843, 0)
+Activation.Size = UDim2.new(0, 200, 0, 50)
+Activation.Font = Enum.Font.Cartoon
+Activation.Text = "View Stand"
+Activation.TextColor3 = Color3.fromRGB(255, 21, 103)
+Activation.TextSize = 40.000
+Activation.TextStrokeTransparency = 0.000
 
-Level.Name = "Level"
-Level.Parent = Frame2
-Level.BackgroundColor3 = Color3.fromRGB(110, 97, 154)
-Level.BackgroundTransparency = 0.800
-Level.Position = UDim2.new(0.122358978, 0, 0.235480621, 0)
-Level.Size = UDim2.new(0, 176, 0, 30)
-Level.Font = Enum.Font.Cartoon
-Level.Text = "Level"
-Level.TextColor3 = Color3.fromRGB(255, 255, 255)
-Level.TextScaled = true
-Level.TextSize = 20.000
-Level.TextStrokeTransparency = 0.000
-Level.TextTransparency = 0.500
-Level.TextWrapped = true
+Cringe.Name = "Cringe"
+Cringe.Parent = Frame
+Cringe.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+Cringe.BackgroundTransparency = 0.700
+Cringe.Position = UDim2.new(-0.772200763, 0, 0.0188679248, 0)
+Cringe.Size = UDim2.new(0, 200, 0, 50)
+Cringe.Visible = false
+Cringe.Font = Enum.Font.Bodoni
+Cringe.Text = "Stalker"
+Cringe.TextColor3 = Color3.fromRGB(0, 0, 0)
+Cringe.TextSize = 30.000
 
-Stand_2.Name = "Stand"
-Stand_2.Parent = Frame2
-Stand_2.BackgroundColor3 = Color3.fromRGB(110, 97, 154)
-Stand_2.BackgroundTransparency = 0.800
-Stand_2.Position = UDim2.new(0.122358978, 0, 0.324249446, 0)
-Stand_2.Size = UDim2.new(0, 176, 0, 30)
-Stand_2.Font = Enum.Font.Cartoon
-Stand_2.Text = "Stand"
-Stand_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-Stand_2.TextScaled = true
-Stand_2.TextSize = 20.000
-Stand_2.TextStrokeTransparency = 0.000
-Stand_2.TextTransparency = 0.500
-Stand_2.TextWrapped = true
+Finded.Name = "Finded"
+Finded.Parent = StandViewer
+Finded.BackgroundColor3 = Color3.fromRGB(175, 0, 55)
+Finded.BackgroundTransparency = 0.300
+Finded.Position = UDim2.new(0.57074827, 0, 0.1932749, 0)
+Finded.Size = UDim2.new(0, 397, 0, 640)
+Finded.Visible = false
+
+Named.Name = "Named"
+Named.Parent = Finded
+Named.BackgroundColor3 = Color3.fromRGB(6, 136, 0)
+Named.BackgroundTransparency = 0.700
+Named.Position = UDim2.new(0.118807621, 0, 0.0337301716, 0)
+Named.Size = UDim2.new(0, 303, 0, 50)
+Named.Font = Enum.Font.Cartoon
+Named.Text = "Name"
+Named.TextColor3 = Color3.fromRGB(0, 0, 0)
+Named.TextSize = 30.000
+
+Stand.Name = "Stand"
+Stand.Parent = Finded
+Stand.BackgroundColor3 = Color3.fromRGB(6, 136, 0)
+Stand.BackgroundTransparency = 0.700
+Stand.Position = UDim2.new(0.118807621, 0, 0.146874949, 0)
+Stand.Size = UDim2.new(0, 303, 0, 50)
+Stand.Font = Enum.Font.Cartoon
+Stand.Text = "Stand"
+Stand.TextColor3 = Color3.fromRGB(0, 0, 0)
+Stand.TextSize = 30.000
 
 Spec.Name = "Spec"
-Spec.Parent = Frame2
-Spec.BackgroundColor3 = Color3.fromRGB(110, 97, 154)
-Spec.BackgroundTransparency = 0.800
-Spec.Position = UDim2.new(0.122358978, 0, 0.415500909, 0)
-Spec.Size = UDim2.new(0, 176, 0, 30)
+Spec.Parent = Finded
+Spec.BackgroundColor3 = Color3.fromRGB(6, 136, 0)
+Spec.BackgroundTransparency = 0.700
+Spec.Position = UDim2.new(0.118807621, 0, 0.266641796, 0)
+Spec.Size = UDim2.new(0, 303, 0, 50)
 Spec.Font = Enum.Font.Cartoon
 Spec.Text = "Spec"
-Spec.TextColor3 = Color3.fromRGB(255, 255, 255)
-Spec.TextScaled = true
-Spec.TextSize = 20.000
-Spec.TextStrokeTransparency = 0.000
-Spec.TextTransparency = 0.500
-Spec.TextWrapped = true
+Spec.TextColor3 = Color3.fromRGB(0, 0, 0)
+Spec.TextSize = 30.000
+
+Roka.Name = "Roka"
+Roka.Parent = Finded
+Roka.BackgroundColor3 = Color3.fromRGB(6, 136, 0)
+Roka.BackgroundTransparency = 0.700
+Roka.Position = UDim2.new(0.118807621, 0, 0.509647727, 0)
+Roka.Size = UDim2.new(0, 303, 0, 50)
+Roka.Font = Enum.Font.Cartoon
+Roka.Text = "Roka"
+Roka.TextColor3 = Color3.fromRGB(0, 0, 0)
+Roka.TextSize = 30.000
+
+Arrow.Name = "Arrow"
+Arrow.Parent = Finded
+Arrow.BackgroundColor3 = Color3.fromRGB(6, 136, 0)
+Arrow.BackgroundTransparency = 0.700
+Arrow.Position = UDim2.new(0.118807621, 0, 0.386011899, 0)
+Arrow.Size = UDim2.new(0, 303, 0, 50)
+Arrow.Font = Enum.Font.Cartoon
+Arrow.Text = "Arrow"
+Arrow.TextColor3 = Color3.fromRGB(0, 0, 0)
+Arrow.TextSize = 30.000
 
 Money.Name = "Money"
-Money.Parent = Frame2
-Money.BackgroundColor3 = Color3.fromRGB(110, 97, 154)
-Money.BackgroundTransparency = 0.800
-Money.Position = UDim2.new(0.122358978, 0, 0.507254839, 0)
-Money.Size = UDim2.new(0, 176, 0, 30)
+Money.Parent = Finded
+Money.BackgroundColor3 = Color3.fromRGB(6, 136, 0)
+Money.BackgroundTransparency = 0.700
+Money.Position = UDim2.new(0.118807621, 0, 0.627678692, 0)
+Money.Size = UDim2.new(0, 303, 0, 50)
 Money.Font = Enum.Font.Cartoon
 Money.Text = "Money"
-Money.TextColor3 = Color3.fromRGB(255, 255, 255)
-Money.TextScaled = true
-Money.TextSize = 20.000
-Money.TextStrokeTransparency = 0.000
-Money.TextTransparency = 0.500
-Money.TextWrapped = true
+Money.TextColor3 = Color3.fromRGB(0, 0, 0)
+Money.TextSize = 30.000
 
-Arrows.Name = "Arrows"
-Arrows.Parent = Frame2
-Arrows.BackgroundColor3 = Color3.fromRGB(110, 97, 154)
-Arrows.BackgroundTransparency = 0.800
-Arrows.Position = UDim2.new(0.122358978, 0, 0.596534371, 0)
-Arrows.Size = UDim2.new(0, 176, 0, 30)
-Arrows.Font = Enum.Font.Cartoon
-Arrows.Text = "Arrows"
-Arrows.TextColor3 = Color3.fromRGB(255, 255, 255)
-Arrows.TextScaled = true
-Arrows.TextSize = 20.000
-Arrows.TextStrokeTransparency = 0.000
-Arrows.TextTransparency = 0.500
-Arrows.TextWrapped = true
+close.Name = "close"
+close.Parent = Finded
+close.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+close.BackgroundTransparency = 0.600
+close.Position = UDim2.new(0.904282093, 0, 0, 0)
+close.Size = UDim2.new(0, 38, 0, 38)
+close.Font = Enum.Font.Fantasy
+close.Text = "X"
+close.TextColor3 = Color3.fromRGB(0, 0, 0)
+close.TextSize = 40.000
 
-Rokakaka.Name = "Rokakaka"
-Rokakaka.Parent = Frame2
-Rokakaka.BackgroundColor3 = Color3.fromRGB(110, 97, 154)
-Rokakaka.BackgroundTransparency = 0.800
-Rokakaka.Position = UDim2.new(0.122358978, 0, 0.691151738, 0)
-Rokakaka.Size = UDim2.new(0, 176, 0, 30)
-Rokakaka.Font = Enum.Font.Cartoon
-Rokakaka.Text = "Rokakaka"
-Rokakaka.TextColor3 = Color3.fromRGB(255, 255, 255)
-Rokakaka.TextScaled = true
-Rokakaka.TextSize = 20.000
-Rokakaka.TextStrokeTransparency = 0.000
-Rokakaka.TextTransparency = 0.500
-Rokakaka.TextWrapped = true
+What.Name = "What"
+What.Parent = Finded
+What.BackgroundColor3 = Color3.fromRGB(6, 136, 0)
+What.BackgroundTransparency = 0.700
+What.Position = UDim2.new(0.118387908, 0, 0.753125012, 0)
+What.Size = UDim2.new(0, 303, 0, 50)
+What.Font = Enum.Font.Cartoon
+What.Text = "How"
+What.TextColor3 = Color3.fromRGB(0, 0, 0)
+What.TextSize = 30.000
 
-TextBox.Parent = Frame2
-TextBox.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-TextBox.BackgroundTransparency = 0.600
-TextBox.Position = UDim2.new(0.0706107616, 0, 0.782971382, 0)
-TextBox.Size = UDim2.new(0, 200, 0, 39)
-TextBox.Font = Enum.Font.Cartoon
-TextBox.Text = "Player Name"
-TextBox.TextColor3 = Color3.fromRGB(17, 171, 0)
-TextBox.TextSize = 35.000
-TextBox.TextStrokeTransparency = 0.000
-
-TextButton.Parent = Frame2
-TextButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-TextButton.BackgroundTransparency = 0.600
-TextButton.Position = UDim2.new(0.0706107616, 0, 0.900755048, 0)
-TextButton.Size = UDim2.new(0, 199, 0, 31)
-TextButton.Font = Enum.Font.Cartoon
-TextButton.Text = "Show Info"
-TextButton.TextColor3 = Color3.fromRGB(204, 46, 49)
-TextButton.TextSize = 40.000
-TextButton.TextStrokeTransparency = 0.000
-
-del.Name = "del"
-del.Parent = Frame2
-del.BackgroundColor3 = Color3.fromRGB(190, 0, 0)
-del.BackgroundTransparency = 0.300
-del.Position = UDim2.new(0.91452992, 0, 0, 0)
-del.Size = UDim2.new(0, 20, 0, 20)
-del.Font = Enum.Font.SourceSans
-del.Text = ""
-del.TextColor3 = Color3.fromRGB(0, 0, 0)
-del.TextSize = 14.000
+Whatt.Name = "Whatt"
+Whatt.Parent = Finded
+Whatt.BackgroundColor3 = Color3.fromRGB(6, 136, 0)
+Whatt.BackgroundTransparency = 0.700
+Whatt.Position = UDim2.new(0.116481215, 0, 0.879687488, 0)
+Whatt.Size = UDim2.new(0, 303, 0, 50)
+Whatt.Font = Enum.Font.Cartoon
+Whatt.Text = "What"
+Whatt.TextColor3 = Color3.fromRGB(0, 0, 0)
+Whatt.TextSize = 30.000
 
 -- Scripts:
 
-local function VXSEH_fake_script() -- Stand.LocalScript 
-	local script = Instance.new('LocalScript', Stand)
+local function SMIRC_fake_script() -- StandViewer.Script 
+	local script = Instance.new('LocalScript', StandViewer)
 
-	local Frame2 = script.Parent.Frame2
-	Frame2.TextButton.MouseButton1Click:Connect(function()
-		local Players = game:GetService("Players")
-		local function get_player(name: string): Player | nil
-			name = name:lower()
+	local boutton = script.Parent.Frame.Activation
+	local text = script.Parent.Frame.Pseudo
+	local Cringe = script.Parent.Frame.Cringe
+	local Players = game:GetService("Players")
+	local Pinput = game:GetService("UserInputService")
+	local frame = script.Parent.Frame
+	local Find = script.Parent.Finded
 	
-			for _, player in ipairs(Players:GetPlayers()) do
-				if name == player.Name:lower():sub(1, #name) then
-					return player
-				end
+	Pinput.InputBegan:Connect(function(input)
+		if input.KeyCode == Enum.KeyCode.RightControl then
+			if frame.Visible == true then
+				frame.Visible = false
+			else
+				frame.Visible = true
 			end
-			return nil
-		end
-		local name = get_player(Frame2.TextBox.Text)
-		local plr = Players[name.Name]
-		local Stat = plr.PlayerStats
-		Frame2.Pseudo.Text = "Name : "..Stat.Parent.Name
-		Frame2.Prestige.Text = "Prestige : "..Stat.Prestige.Value
-		Frame2.Level.Text = "Level : "..Stat.Level.Value
-		Frame2.Stand.Text = "Current Stand : "..Stat.Stand.Value
-		Frame2.Spec.Text = "Current Spec : "..Stat.Spec.Value
-		Frame2.Money.Text = "Money : "..plr.PlayerGui.HUD.Main.DropMoney.Money.Text
-		if plr.Backpack:FindFirstChild("Mysterious Arrow") ~= nil then
-			Frame2.Arrows.Text = "Mysterious Arrows : true"
-		else
-			Frame2.Arrows.Text = "Mysterious Arrows : false"
-		end
-		if plr.Backpack:FindFirstChild("Rokakaka") ~= nil then
-			Frame2.Rokakaka.Text = "Rokakaka : true"
-		else
-			Frame2.Rokakaka.Text = "Rokakaka : false"
+			if Find.Visible == true then
+				Find.Visible = false
+			end
 		end
 	end)
 	
-	Frame2.del.MouseButton1Click:Connect(function()
-		script.Parent:Destroy()
+	Cringe.MouseButton1Click:Connect(function()
+		for i, plr in pairs(Players:GetPlayers()) do
+			print(plr)
+		end
+	end)
+	
+	boutton.MouseButton1Click:Connect(function()
+		Find.Visible = true
+		local plr = Players:FindFirstChild(text.Text)
+		local data = Players[plr.Name]
+		local Roka = 0
+		local Arrow = 0
+		for i, truc in pairs(data.Backpack:GetChildren()) do
+			if truc.Name == "Rokakaka" then
+				Roka = Roka+1
+			end
+			if truc.Name == "Mysterious Arrow" then
+				Arrow = Arrow+1
+			end
+		end
+		Find.Named.Text = "Name : "..text.Text
+		Find.Stand.Text = "Stand : "..data.PlayerStats.Stand.Value
+		Find.Spec.Text = "Spec : "..data.PlayerStats.Spec.Value
+		Find.Roka.Text = "Roka : "..Roka
+		Find.Arrow.Text = "Arrow : "..Arrow
+		Find.Money.Text = "Money : "..data.PlayerStats.Money.Value
+	end)
+	
+	Find.close.MouseButton1Click:Connect(function()
+		Find.Visible = false
+	end)
+	
+	Find.What.MouseButton1Click:Connect(function()
+		local plr = Players:FindFirstChild(text.Text)
+		local data = Players[plr.Name]
+		local things = Find.Whatt.Text
+		local how = 0
+		for i, truc in pairs(data.Backpack:GetChildren()) do
+			if truc.Name == things then
+				how = how +1
+			end
+		end
+		Find.What.Text = "How : "..how
 	end)
 end
-coroutine.wrap(VXSEH_fake_script)()
-local function HLCOFNP_fake_script() -- Frame2.move 
-	local script = Instance.new('LocalScript', Frame2)
-
-	local UIS = game:GetService('UserInputService')
-	
-	local frame = script.Parent
-	
-	
-	
-	local dragToggle = nil
-	
-	local dragSpeed = 0.1
-	
-	local dragStart = nil
-	
-	local startPos = nil
-	
-	
-	
-	local function updateInput(input)
-	
-		local delta = input.Position - dragStart
-	
-		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
-	
-			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
-	
-		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
-	
-	end
-	
-	
-	
-	frame.InputBegan:Connect(function(input)
-	
-		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
-	
-			dragToggle = true
-	
-			dragStart = input.Position
-	
-			startPos = frame.Position
-	
-			input.Changed:Connect(function()
-	
-				if input.UserInputState == Enum.UserInputState.End then
-	
-					dragToggle = false
-	
-				end
-	
-			end)
-	
-		end
-	
-	end)
-	
-	
-	
-	UIS.InputChanged:Connect(function(input)
-	
-		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-	
-			if dragToggle then
-	
-				updateInput(input)
-	
-			end
-	
-		end
-	
-	end)
-end
-coroutine.wrap(HLCOFNP_fake_script)()
+coroutine.wrap(SMIRC_fake_script)()
