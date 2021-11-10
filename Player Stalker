@@ -74,7 +74,7 @@ Activation.TextStrokeTransparency = 0.000
 Cringe.Name = "Cringe"
 Cringe.Parent = Frame
 Cringe.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-Cringe.BackgroundTransparency = 0.700
+Cringe.BackgroundTransparency = 0.770
 Cringe.Size = UDim2.new(0, 205, 0, 53)
 Cringe.Font = Enum.Font.Bodoni
 Cringe.Text = "Stalker"
@@ -83,8 +83,8 @@ Cringe.TextSize = 30.000
 
 close.Name = "close"
 close.Parent = Frame
-close.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-close.BackgroundTransparency = 0.600
+close.BackgroundColor3 = Color3.fromRGB(184, 0, 0)
+close.BackgroundTransparency = 0.200
 close.Position = UDim2.new(0.79231292, 0, 0, 0)
 close.Size = UDim2.new(0, 53, 0, 53)
 close.Font = Enum.Font.Fantasy
@@ -95,21 +95,24 @@ close.TextSize = 40.000
 Players.Name = "Players"
 Players.Parent = Frame
 Players.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-Players.BackgroundTransparency = 0.700
-Players.Position = UDim2.new(-1.14671814, 0, -3.13207555, 0)
-Players.Size = UDim2.new(0, 818, 0, 50)
+Players.BackgroundTransparency = 0.500
+Players.Position = UDim2.new(-1.18532801, 0, -7.43396235, 0)
+Players.Size = UDim2.new(0, 818, 0, 101)
 Players.Visible = false
-Players.Font = Enum.Font.Bodoni
+Players.Font = Enum.Font.Cartoon
 Players.Text = "Players"
-Players.TextColor3 = Color3.fromRGB(0, 0, 0)
-Players.TextSize = 25.000
+Players.TextColor3 = Color3.fromRGB(89, 161, 255)
+Players.TextScaled = true
+Players.TextSize = 28.000
+Players.TextStrokeTransparency = 0.000
+Players.TextWrapped = true
 
 cclose.Name = "cclose"
 cclose.Parent = Players
-cclose.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-cclose.BackgroundTransparency = 0.500
+cclose.BackgroundColor3 = Color3.fromRGB(184, 0, 0)
+cclose.BackgroundTransparency = 0.200
 cclose.Position = UDim2.new(1, 0, 0, 0)
-cclose.Size = UDim2.new(0, 50, 0, 50)
+cclose.Size = UDim2.new(0, 40, 0, 40)
 cclose.Font = Enum.Font.SourceSans
 cclose.Text = "X"
 cclose.TextColor3 = Color3.fromRGB(0, 0, 0)
@@ -117,10 +120,10 @@ cclose.TextSize = 50.000
 
 Finded.Name = "Finded"
 Finded.Parent = StandViewer
-Finded.BackgroundColor3 = Color3.fromRGB(175, 0, 55)
-Finded.BackgroundTransparency = 0.300
+Finded.BackgroundColor3 = Color3.fromRGB(145, 35, 35)
+Finded.BackgroundTransparency = 0.200
 Finded.BorderColor3 = Color3.fromRGB(27, 42, 53)
-Finded.Position = UDim2.new(0.572314024, 0, 0.0938154534, 0)
+Finded.Position = UDim2.new(0.604453087, 0, 0.235952556, 0)
 Finded.Size = UDim2.new(0, 397, 0, 667)
 Finded.Visible = false
 
@@ -133,7 +136,9 @@ Named.Size = UDim2.new(0, 303, 0, 50)
 Named.Font = Enum.Font.Cartoon
 Named.Text = "Name"
 Named.TextColor3 = Color3.fromRGB(0, 0, 0)
+Named.TextScaled = true
 Named.TextSize = 30.000
+Named.TextWrapped = true
 
 Stand.Name = "Stand"
 Stand.Parent = Finded
@@ -144,7 +149,9 @@ Stand.Size = UDim2.new(0, 303, 0, 50)
 Stand.Font = Enum.Font.Cartoon
 Stand.Text = "Stand"
 Stand.TextColor3 = Color3.fromRGB(0, 0, 0)
+Stand.TextScaled = true
 Stand.TextSize = 30.000
+Stand.TextWrapped = true
 
 Spec.Name = "Spec"
 Spec.Parent = Finded
@@ -155,7 +162,9 @@ Spec.Size = UDim2.new(0, 303, 0, 50)
 Spec.Font = Enum.Font.Cartoon
 Spec.Text = "Spec"
 Spec.TextColor3 = Color3.fromRGB(0, 0, 0)
+Spec.TextScaled = true
 Spec.TextSize = 30.000
+Spec.TextWrapped = true
 
 Money.Name = "Money"
 Money.Parent = Finded
@@ -166,12 +175,14 @@ Money.Size = UDim2.new(0, 303, 0, 50)
 Money.Font = Enum.Font.Cartoon
 Money.Text = "Money"
 Money.TextColor3 = Color3.fromRGB(0, 0, 0)
+Money.TextScaled = true
 Money.TextSize = 30.000
+Money.TextWrapped = true
 
 close_2.Name = "close"
 close_2.Parent = Finded
-close_2.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-close_2.BackgroundTransparency = 0.600
+close_2.BackgroundColor3 = Color3.fromRGB(184, 0, 0)
+close_2.BackgroundTransparency = 0.200
 close_2.Position = UDim2.new(0.904282093, 0, 0, 0)
 close_2.Size = UDim2.new(0, 38, 0, 38)
 close_2.Font = Enum.Font.Fantasy
@@ -188,7 +199,9 @@ What.Size = UDim2.new(0, 303, 0, 50)
 What.Font = Enum.Font.Cartoon
 What.Text = "How many"
 What.TextColor3 = Color3.fromRGB(0, 0, 0)
+What.TextScaled = true
 What.TextSize = 30.000
+What.TextWrapped = true
 
 Level.Name = "Level"
 Level.Parent = Finded
@@ -199,7 +212,9 @@ Level.Size = UDim2.new(0, 303, 0, 50)
 Level.Font = Enum.Font.Cartoon
 Level.Text = "Level"
 Level.TextColor3 = Color3.fromRGB(0, 0, 0)
+Level.TextScaled = true
 Level.TextSize = 30.000
+Level.TextWrapped = true
 
 Prestige.Name = "Prestige"
 Prestige.Parent = Finded
@@ -210,7 +225,9 @@ Prestige.Size = UDim2.new(0, 303, 0, 50)
 Prestige.Font = Enum.Font.Cartoon
 Prestige.Text = "Prestige"
 Prestige.TextColor3 = Color3.fromRGB(0, 0, 0)
+Prestige.TextScaled = true
 Prestige.TextSize = 30.000
+Prestige.TextWrapped = true
 
 Gang.Name = "Gang"
 Gang.Parent = Finded
@@ -221,7 +238,9 @@ Gang.Size = UDim2.new(0, 303, 0, 50)
 Gang.Font = Enum.Font.Cartoon
 Gang.Text = "Gang"
 Gang.TextColor3 = Color3.fromRGB(0, 0, 0)
+Gang.TextScaled = true
 Gang.TextSize = 30.000
+Gang.TextWrapped = true
 
 Race.Name = "Race"
 Race.Parent = Finded
@@ -232,13 +251,15 @@ Race.Size = UDim2.new(0, 303, 0, 50)
 Race.Font = Enum.Font.Cartoon
 Race.Text = "Race"
 Race.TextColor3 = Color3.fromRGB(0, 0, 0)
+Race.TextScaled = true
 Race.TextSize = 30.000
+Race.TextWrapped = true
 
 item.Name = "item"
 item.Parent = StandViewer
-item.BackgroundColor3 = Color3.fromRGB(175, 0, 55)
-item.BackgroundTransparency = 0.300
-item.Position = UDim2.new(0.144181281, 0, 0.110111699, 0)
+item.BackgroundColor3 = Color3.fromRGB(145, 35, 35)
+item.BackgroundTransparency = 0.200
+item.Position = UDim2.new(0.114676535, 0, 0.236119762, 0)
 item.Size = UDim2.new(0, 397, 0, 705)
 item.Visible = false
 
@@ -345,7 +366,7 @@ Balls.Name = "Balls"
 Balls.Parent = item
 Balls.BackgroundColor3 = Color3.fromRGB(6, 136, 0)
 Balls.BackgroundTransparency = 0.700
-Balls.Position = UDim2.new(0.115869015, 0, 0.0674202666, 0)
+Balls.Position = UDim2.new(0.115869015, 0, 0.0518174283, 0)
 Balls.Size = UDim2.new(0, 303, 0, 50)
 Balls.Font = Enum.Font.Cartoon
 Balls.Text = "Balls"
@@ -354,7 +375,7 @@ Balls.TextSize = 30.000
 
 -- Scripts:
 
-local function HQFML_fake_script() -- StandViewer.Script 
+local function WHVJU_fake_script() -- StandViewer.Script 
 	local script = Instance.new('LocalScript', StandViewer)
 
 	local boutton = script.Parent.Frame.Activation
@@ -762,4 +783,4 @@ local function HQFML_fake_script() -- StandViewer.Script
 		end
 	end)
 end
-coroutine.wrap(HQFML_fake_script)()
+coroutine.wrap(WHVJU_fake_script)()
