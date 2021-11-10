@@ -9,6 +9,8 @@ local Pseudo = Instance.new("TextBox")
 local Activation = Instance.new("TextButton")
 local Cringe = Instance.new("TextButton")
 local close = Instance.new("TextButton")
+local Players = Instance.new("TextLabel")
+local cclose = Instance.new("TextButton")
 local Finded = Instance.new("Frame")
 local Named = Instance.new("TextLabel")
 local Stand = Instance.new("TextLabel")
@@ -52,7 +54,7 @@ Pseudo.BackgroundTransparency = 0.800
 Pseudo.Position = UDim2.new(0.111981802, 0, -0.692830205, 0)
 Pseudo.Size = UDim2.new(0, 200, 0, 50)
 Pseudo.Font = Enum.Font.Cartoon
-Pseudo.Text = "Name"
+Pseudo.Text = "Pseudo"
 Pseudo.TextColor3 = Color3.fromRGB(217, 204, 23)
 Pseudo.TextSize = 35.000
 Pseudo.TextStrokeTransparency = 0.000
@@ -73,9 +75,7 @@ Cringe.Name = "Cringe"
 Cringe.Parent = Frame
 Cringe.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
 Cringe.BackgroundTransparency = 0.700
-Cringe.Position = UDim2.new(-0.772200763, 0, 0.0188679248, 0)
-Cringe.Size = UDim2.new(0, 200, 0, 50)
-Cringe.Visible = false
+Cringe.Size = UDim2.new(0, 205, 0, 53)
 Cringe.Font = Enum.Font.Bodoni
 Cringe.Text = "Stalker"
 Cringe.TextColor3 = Color3.fromRGB(0, 0, 0)
@@ -91,6 +91,29 @@ close.Font = Enum.Font.Fantasy
 close.Text = "X"
 close.TextColor3 = Color3.fromRGB(0, 0, 0)
 close.TextSize = 40.000
+
+Players.Name = "Players"
+Players.Parent = Frame
+Players.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+Players.BackgroundTransparency = 0.700
+Players.Position = UDim2.new(-1.14671814, 0, -3.13207555, 0)
+Players.Size = UDim2.new(0, 818, 0, 50)
+Players.Visible = false
+Players.Font = Enum.Font.Bodoni
+Players.Text = "Players"
+Players.TextColor3 = Color3.fromRGB(0, 0, 0)
+Players.TextSize = 25.000
+
+cclose.Name = "cclose"
+cclose.Parent = Players
+cclose.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+cclose.BackgroundTransparency = 0.500
+cclose.Position = UDim2.new(1, 0, 0, 0)
+cclose.Size = UDim2.new(0, 50, 0, 50)
+cclose.Font = Enum.Font.SourceSans
+cclose.Text = "X"
+cclose.TextColor3 = Color3.fromRGB(0, 0, 0)
+cclose.TextSize = 50.000
 
 Finded.Name = "Finded"
 Finded.Parent = StandViewer
@@ -331,7 +354,7 @@ Balls.TextSize = 30.000
 
 -- Scripts:
 
-local function IFIWQFE_fake_script() -- StandViewer.Script 
+local function HQFML_fake_script() -- StandViewer.Script 
 	local script = Instance.new('LocalScript', StandViewer)
 
 	local boutton = script.Parent.Frame.Activation
@@ -345,6 +368,10 @@ local function IFIWQFE_fake_script() -- StandViewer.Script
 	
 	frame.close.MouseButton1Click:Connect(function()
 		script.Parent:Destroy()
+	end)
+	
+	frame.Players.cclose.MouseButton1Click:Connect(function()
+		frame.Players.Visible = false
 	end)
 	
 	Pinput.InputBegan:Connect(function(input)
@@ -365,8 +392,7 @@ local function IFIWQFE_fake_script() -- StandViewer.Script
 		Find.Visible = false
 		item.Visible = false
 	end)
-	
-	Find.What.MouseButton1Click:Connect(function()
+	frame.Cringe.MouseButton1Click:Connect(function()
 		if item.Visible == false then
 			item.Visible = true
 		else
@@ -374,9 +400,11 @@ local function IFIWQFE_fake_script() -- StandViewer.Script
 		end
 	end)
 	
-	Cringe.MouseButton1Click:Connect(function()
-		for i, plr in pairs(Players:GetPlayers()) do
-			print(plr)
+	Find.What.MouseButton1Click:Connect(function()
+		if item.Visible == false then
+			item.Visible = true
+		else
+			item.Visible = false
 		end
 	end)
 	
@@ -395,143 +423,343 @@ local function IFIWQFE_fake_script() -- StandViewer.Script
 	end)
 	
 	item.Arrow.MouseButton1Click:Connect(function()
-		local plr = Players:FindFirstChild(text.Text)
-		local data = Players[plr.Name]
 		local it = 0
+		local inv = {}
+		local kown = 0
+		local rep = ""
 		if Find.Visible == true then
+			local plr = Players:FindFirstChild(text.Text)
+			local data = plr
 			for i, arrow in pairs(data.Backpack:GetChildren()) do
 				if arrow.Name == "Mysterious Arrow" or arrow.Name == "Stand Arrow" then
 					it = it +1
 				end
 			end
 			Find.What.Text = "How many : "..it
+		else
+			for i, name in pairs(Players:GetPlayers()) do
+				local data = name
+				for i, arrow in pairs(data.Backpack:GetChildren()) do
+					if arrow.Name == "Mysterious Arrow" or arrow.Name == "Stand Arrow" then
+						kown = 1
+					end
+				end
+				if kown == 1 then
+					table.insert(inv, name)
+				end
+			end
+			for k, v in pairs(inv) do
+				rep = rep..v.Name.." "
+			end
+			frame.Players.Text = rep
+			frame.Players.Visible = true
 		end
 	end)
 	
 	item.Roka.MouseButton1Click:Connect(function()
-		local plr = Players:FindFirstChild(text.Text)
-		local data = Players[plr.Name]
 		local it = 0
+		local inv = {}
+		local kown = 0
+		local rep = ""
 		if Find.Visible == true then
+			local plr = Players:FindFirstChild(text.Text)
+			local data = Players[plr.Name]
 			for i, arrow in pairs(data.Backpack:GetChildren()) do
 				if arrow.Name == "Rokakaka"then
 					it = it +1
 				end
 			end
 			Find.What.Text = "How many : "..it
+		else
+			for i, name in pairs(Players:GetPlayers()) do
+				local data = name
+				for i, arrow in pairs(data.Backpack:GetChildren()) do
+					if arrow.Name == "Rokakaka" then
+						kown = 1
+					end
+				end
+				if kown == 1 then
+					table.insert(inv, name)
+				end
+			end
+			for k, v in pairs(inv) do
+				rep = rep..v.Name.." "
+			end
+			frame.Players.Text = rep
+			frame.Players.Visible = true
 		end
 	end)
 	
 	item.Pure.MouseButton1Click:Connect(function()
-		local plr = Players:FindFirstChild(text.Text)
-		local data = Players[plr.Name]
 		local it = 0
+		local inv = {}
+		local kown = 0
+		local rep = ""
 		if Find.Visible == true then
+			local plr = Players:FindFirstChild(text.Text)
+			local data = Players[plr.Name]
 			for i, arrow in pairs(data.Backpack:GetChildren()) do
 				if arrow.Name == "Pure Rokakaka"then
 					it = it +1
 				end
 			end
 			Find.What.Text = "How many : "..it
+		else
+			for i, name in pairs(Players:GetPlayers()) do
+				local data = name
+				for i, arrow in pairs(data.Backpack:GetChildren()) do
+					if arrow.Name == "Pure Rokakaka" then
+						kown = 1
+					end
+				end
+				if kown == 1 then
+					table.insert(inv, name)
+				end
+			end
+			for k, v in pairs(inv) do
+				rep = rep..v.Name.." "
+			end
+			frame.Players.Text = rep
+			frame.Players.Visible = true
 		end
 	end)
 	
 	item.Rib.MouseButton1Click:Connect(function()
-		local plr = Players:FindFirstChild(text.Text)
-		local data = Players[plr.Name]
 		local it = 0
+		local inv = {}
+		local kown = 0
+		local rep = ""
 		if Find.Visible == true then
+			local plr = Players:FindFirstChild(text.Text)
+			local data = Players[plr.Name]
 			for i, arrow in pairs(data.Backpack:GetChildren()) do
 				if arrow.Name == "Rib Cage of The Saint's Corpse"then
 					it = it +1
 				end
 			end
 			Find.What.Text = "How many : "..it
+		else
+			for i, name in pairs(Players:GetPlayers()) do
+				local data = name
+				for i, arrow in pairs(data.Backpack:GetChildren()) do
+					if arrow.Name == "Rib Cage of The Saint's Corpse" then
+						kown = 1
+					end
+				end
+				if kown == 1 then
+					table.insert(inv, name)
+				end
+			end
+			for k, v in pairs(inv) do
+				rep = rep..v.Name.." "
+			end
+			frame.Players.Text = rep
+			frame.Players.Visible = true
 		end
 	end)
 	
 	item.Glove.MouseButton1Click:Connect(function()
-		local plr = Players:FindFirstChild(text.Text)
-		local data = Players[plr.Name]
 		local it = 0
+		local inv = {}
+		local kown = 0
+		local rep = ""
 		if Find.Visible == true then
+			local plr = Players:FindFirstChild(text.Text)
+			local data = Players[plr.Name]
 			for i, arrow in pairs(data.Backpack:GetChildren()) do
 				if arrow.Name == "Quinton's Glove"then
 					it = it +1
 				end
 			end
 			Find.What.Text = "How many : "..it
+		else
+			for i, name in pairs(Players:GetPlayers()) do
+				local data = name
+				for i, arrow in pairs(data.Backpack:GetChildren()) do
+					if arrow.Name == "Quinton's Glove" then
+						kown = 1
+					end
+				end
+				if kown == 1 then
+					table.insert(inv, name)
+				end
+			end
+			for k, v in pairs(inv) do
+				rep = rep..v.Name.." "
+			end
+			frame.Players.Text = rep
+			frame.Players.Visible = true
 		end
 	end)
 	
 	item.DEO.MouseButton1Click:Connect(function()
-		local plr = Players:FindFirstChild(text.Text)
-		local data = Players[plr.Name]
 		local it = 0
+		local inv = {}
+		local kown = 0
+		local rep = ""
 		if Find.Visible == true then
+			local plr = Players:FindFirstChild(text.Text)
+			local data = Players[plr.Name]
 			for i, arrow in pairs(data.Backpack:GetChildren()) do
 				if arrow.Name == "DEO's Diary"then
 					it = it +1
 				end
 			end
 			Find.What.Text = "How many : "..it
+		else
+			for i, name in pairs(Players:GetPlayers()) do
+				local data = name
+				for i, arrow in pairs(data.Backpack:GetChildren()) do
+					if arrow.Name == "DEO's Diary" then
+						kown = 1
+					end
+				end
+				if kown == 1 then
+					table.insert(inv, name)
+				end
+			end
+			for k, v in pairs(inv) do
+				rep = rep..v.Name.." "
+			end
+			frame.Players.Text = rep
+			frame.Players.Visible = true
 		end
 	end)
 	
 	item.Balls.MouseButton1Click:Connect(function()
-		local plr = Players:FindFirstChild(text.Text)
-		local data = Players[plr.Name]
 		local it = 0
+		local inv = {}
+		local kown = 0
+		local rep = ""
 		if Find.Visible == true then
+			local plr = Players:FindFirstChild(text.Text)
+			local data = Players[plr.Name]
 			for i, arrow in pairs(data.Backpack:GetChildren()) do
 				if arrow.Name == "Steel Ball"then
 					it = it +1
 				end
 			end
 			Find.What.Text = "How many : "..it
+		else
+			for i, name in pairs(Players:GetPlayers()) do
+				local data = name
+				for i, arrow in pairs(data.Backpack:GetChildren()) do
+					if arrow.Name == "Steel Ball" then
+						kown = 1
+					end
+				end
+				if kown == 1 then
+					table.insert(inv, name)
+				end
+			end
+			for k, v in pairs(inv) do
+				rep = rep..v.Name.." "
+			end
+			frame.Players.Text = rep
+			frame.Players.Visible = true
 		end
 	end)
 	
 	item.Scroll.MouseButton1Click:Connect(function()
-		local plr = Players:FindFirstChild(text.Text)
-		local data = Players[plr.Name]
 		local it = 0
+		local inv = {}
+		local kown = 0
+		local rep = ""
 		if Find.Visible == true then
+			local plr = Players:FindFirstChild(text.Text)
+			local data = Players[plr.Name]
 			for i, arrow in pairs(data.Backpack:GetChildren()) do
 				if arrow.Name == "Ancient Scroll"then
 					it = it +1
 				end
 			end
 			Find.What.Text = "How many : "..it
+		else
+			for i, name in pairs(Players:GetPlayers()) do
+				local data = name
+				for i, arrow in pairs(data.Backpack:GetChildren()) do
+					if arrow.Name == "Ancient Scroll" then
+						kown = 1
+					end
+				end
+				if kown == 1 then
+					table.insert(inv, name)
+				end
+			end
+			for k, v in pairs(inv) do
+				rep = rep..v.Name.." "
+			end
+			frame.Players.Text = rep
+			frame.Players.Visible = true
 		end
 	end)
 	
 	item.Diamond.MouseButton1Click:Connect(function()
-		local plr = Players:FindFirstChild(text.Text)
-		local data = Players[plr.Name]
 		local it = 0
+		local inv = {}
+		local kown = 0
+		local rep = ""
 		if Find.Visible == true then
+			local plr = Players:FindFirstChild(text.Text)
+			local data = Players[plr.Name]
 			for i, arrow in pairs(data.Backpack:GetChildren()) do
 				if arrow.Name == "Diamond"then
 					it = it +1
 				end
 			end
 			Find.What.Text = "How many : "..it
+		else
+			for i, name in pairs(Players:GetPlayers()) do
+				local data = name
+				for i, arrow in pairs(data.Backpack:GetChildren()) do
+					if arrow.Name == "Diamond" then
+						kown = 1
+					end
+				end
+				if kown == 1 then
+					table.insert(inv, name)
+				end
+			end
+			for k, v in pairs(inv) do
+				rep = rep..v.Name.." "
+			end
+			frame.Players.Text = rep
+			frame.Players.Visible = true
 		end
 	end)
 	
 	item.Hamon.MouseButton1Click:Connect(function()
-		local plr = Players:FindFirstChild(text.Text)
-		local data = Players[plr.Name]
 		local it = 0
+		local inv = {}
+		local kown = 0
+		local rep = ""
 		if Find.Visible == true then
+			local plr = Players:FindFirstChild(text.Text)
+			local data = Players[plr.Name]
 			for i, arrow in pairs(data.Backpack:GetChildren()) do
 				if arrow.Name == "Zepellin's Headband"then
 					it = it +1
 				end
 			end
 			Find.What.Text = "How many : "..it
+		else
+			for i, name in pairs(Players:GetPlayers()) do
+				local data = name
+				for i, arrow in pairs(data.Backpack:GetChildren()) do
+					if arrow.Name == "Zepellin's Headband" then
+						kown = 1
+					end
+				end
+				if kown == 1 then
+					table.insert(inv, name)
+				end
+			end
+			for k, v in pairs(inv) do
+				rep = rep..v.Name.." "
+			end
+			frame.Players.Text = rep
+			frame.Players.Visible = true
 		end
 	end)
 end
-coroutine.wrap(IFIWQFE_fake_script)()
+coroutine.wrap(HQFML_fake_script)()
